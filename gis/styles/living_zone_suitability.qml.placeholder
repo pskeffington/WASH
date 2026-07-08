@@ -1,0 +1,11 @@
+QGIS style placeholder for living-zone suitability.
+
+Recommended classes:
+
+- preferred
+- suitable_after_verification
+- short_term_only
+- not_recommended
+- unknown
+
+Use neutral, public-facing labels. Do not imply unsupported crime judgments.
