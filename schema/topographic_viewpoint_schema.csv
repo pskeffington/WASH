@@ -1,0 +1,32 @@
+field_name,field_type,public_release,description
+viewpoint_id,string,yes,Unique generalized viewpoint identifier
+viewpoint_name,string,yes,Generalized public or residential viewpoint name
+city,string,yes,Cochabamba or Sucre
+municipality,string,yes,Municipality name
+department,string,yes,Department name
+viewpoint_type,enum,yes,"public_mirador, park, residential_zone, cafe_hotel_zone, university_institutional, road_pullout, unknown"
+geometry_precision,enum,yes,"generalized_point, generalized_polygon, neighborhood_label"
+latitude_private,decimal,no,Private exact latitude if collected with permission
+longitude_private,decimal,no,Private exact longitude if collected with permission
+public_location_label,string,yes,Generalized public label only
+elevation_m,integer,yes,Elevation derived from DEM
+elevation_advantage_m,integer,yes,Approximate elevation advantage over nearby valley floor
+slope_degrees,decimal,yes,Slope from DEM or field estimate
+aspect_degrees,decimal,yes,Aspect from DEM if useful
+viewshed_status,enum,yes,"not_run, partial, good, strong, blocked, unknown"
+airport_context,enum,yes,"cochabamba_jorge_wilstermann, sucre_alcantari, none, unknown"
+airport_visibility_score,integer,yes,0 to 3 where higher means better generalized legal distant visibility
+valley_visibility_score,integer,yes,0 to 3 broad valley visibility
+access_safety_score,integer,yes,0 to 3 where higher means safer lawful public access
+living_suitability_score,integer,yes,0 to 3 if usable as or near a living base
+internet_likelihood_score,integer,yes,0 to 3 preliminary internet/fiber potential
+medical_services_score,integer,yes,0 to 3 proximity to clinic/pharmacy/emergency services
+transport_score,integer,yes,0 to 3 daytime/night transport practicality
+airport_security_sensitivity_risk,integer,yes,0 to 3 where higher means exclude or restrict publication
+crime_exposure_review_status,enum,yes,"not_started, public_sources_only, locally_reviewed, verified"
+legal_access_status,enum,yes,"public, private_permission_needed, restricted_avoid, unknown"
+recommended_status,enum,yes,"preferred, suitable_after_verification, day_visit_only, exclude, unknown"
+public_notes,text,yes,Generalized public notes
+private_notes,text,no,Private notes not for public release
+source_references,text,yes,Public source references and access dates
+validation_status,enum,yes,"draft, source_reviewed, local_reviewed, partner_reviewed, field_verified, validated"
