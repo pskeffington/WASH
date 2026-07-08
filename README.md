@@ -35,6 +35,7 @@ The work is focused on:
 - [Field Assessment Framework](docs/field-assessment-framework.md)
 - [Safety and Living-Zone Mapping Framework](docs/safety-living-zones.md)
 - [Topographic Viewpoint Analysis](docs/topographic-viewpoint-analysis.md)
+- [GIS Build Plan](docs/gis-build-plan.md)
 - [Municipal WASH Profile Template](docs/municipal-profile-template.md)
 - [GIS Mapping System](gis/README.md)
 - [GIS Layer Configuration](config/gis_layers.yaml)
@@ -42,6 +43,11 @@ The work is focused on:
 - [Living Zone GIS Schema](schema/living_zone_schema.csv)
 - [Work Zone GIS Schema](schema/work_zone_schema.csv)
 - [Topographic Viewpoint GIS Schema](schema/topographic_viewpoint_schema.csv)
+
+## Seed datasets
+
+- [Living Zone Candidates](data/seed/living_zones_seed.csv)
+- [Topographic Viewpoint Candidates](data/seed/topographic_viewpoints_seed.csv)
 
 ## GIS system
 
@@ -77,7 +83,7 @@ The Cochabamba-Sucre corridor should be studied as a combined safe-base, topogra
 ## Near-term work plan
 
 - Build current safety-source inventory for Cochabamba and Sucre.
-- Create living-zone candidate polygons for Cochabamba and Sucre.
+- Convert seed living-zone and topographic-viewpoint candidates into generalized GeoJSON layers.
 - Add DEM, slope, hillshade, and generalized viewshed analysis for safe public/residential viewpoints.
 - Build municipal profile sheets for Cochabamba, Sacaba, Tiquipaya, Punata, Cliza, Sucre, Yotala, and selected inter-valley communities.
 - Identify source URLs, licenses, and access dates for public GIS layers.
