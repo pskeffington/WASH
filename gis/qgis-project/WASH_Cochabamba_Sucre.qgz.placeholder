@@ -1,0 +1,7 @@
+This placeholder reserves the QGIS project path.
+
+Create the working QGIS project here as:
+
+WASH_Cochabamba_Sucre.qgz
+
+Do not commit private raw field layers. Keep private layers local under gis/layers/private/ and publish only generalized outputs.
