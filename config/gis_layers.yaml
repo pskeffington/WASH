@@ -1,0 +1,65 @@
+project:
+  name: WASH Bolivia Cochabamba-Sucre Corridor
+  purpose: Public civic-facing WASH and safety mapping
+  default_crs: EPSG:4326
+  public_release_rule: generalized layers only
+
+layer_groups:
+  base:
+    - administrative_boundaries
+    - roads
+    - settlements
+    - hydrology
+    - elevation
+    - public_facilities
+  safety:
+    - living_zones
+    - safety_indicators_public
+    - avoid_or_limit_zones
+    - clinic_emergency_access
+    - transport_nodes
+  wash:
+    - work_zones
+    - water_access_risk
+    - sanitation_risk
+    - school_wash
+    - clinic_wash
+    - watershed_drought_risk
+  planning:
+    - safe_bases
+    - field_circuits
+    - day_trip_routes
+    - partner_locations_public
+
+schemas:
+  living_zones: schema/living_zone_schema.csv
+  work_zones: schema/work_zone_schema.csv
+  wash_sites: schema/wash_site_schema.csv
+
+priority_outputs:
+  - Safe living zone map: Cochabamba
+  - Safe living zone map: Sucre
+  - WASH work zone map: Cochabamba-Sucre corridor
+  - Field circuit map: safe-base to day-trip work zones
+  - Non-sensitive priority index map
+
+data_rules:
+  do_not_commit:
+    - private household coordinates
+    - raw private field notes
+    - exact vulnerable community locations
+    - personal contact information
+    - rumor-based safety claims
+  public_ok:
+    - generalized neighborhood polygons
+    - municipal-level WASH indicators
+    - public facility points from open data
+    - source-documented safety indicators
+    - validated settlement-level classifications
+
+scoring_order:
+  1: living zone safety and continuity
+  2: internet, medical, and daily services
+  3: safe field access and daylight return feasibility
+  4: WASH work-zone priority
+  5: partner and local validation status
