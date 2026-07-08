@@ -1,0 +1,38 @@
+field_name,field_type,public_release,description
+site_id,string,no,Internal unique identifier
+site_type,enum,yes,"household_generalized, school, clinic, community_water_system, public_facility, settlement"
+municipality,string,yes,Municipality name
+department,string,yes,Department name
+corridor_zone,enum,yes,"cochabamba_periurban, valle_alto, inter_valley, sucre_transition, potosi_highland_edge"
+location_precision,enum,yes,"municipal, settlement, generalized_grid, exact_private"
+latitude_private,decimal,no,Private latitude where collected with permission
+longitude_private,decimal,no,Private longitude where collected with permission
+public_location_label,string,yes,Generalized public location label
+elevation_m,integer,yes,Elevation in meters if derived from public DEM
+land_use_context,enum,yes,"urban, peri_urban, agricultural, rural, highland, mining_adjacent, mixed, unknown"
+main_water_source,enum,yes,"piped_network, community_system, cooperative, spring, well, borehole, surface_water, trucked_water, rainwater, mixed, unknown"
+backup_water_source,enum,yes,"none, piped_network, community_system, spring, well, borehole, surface_water, trucked_water, rainwater, bottled, mixed, unknown"
+service_continuity,enum,yes,"continuous, intermittent_daily, intermittent_weekly, seasonal_failure, unknown"
+dry_season_stress,enum,yes,"none_reported, minor, recurring, severe, unknown"
+household_storage_observed,enum,no,"none, covered_container, uncovered_container, tank, mixed, unknown"
+water_treatment_observed,enum,no,"none, boiling, chlorination, filtration, solar_disinfection, bottled, unknown"
+residual_chlorine_mg_l,decimal,no,Private raw test result
+microbial_test_result,enum,no,"negative, positive, not_tested, inconclusive"
+turbidity_ntu,decimal,no,Private raw test result
+sanitation_type,enum,yes,"sewer, septic, pit_latrine, improved_latrine, shared_facility, open_defecation_risk, unknown"
+sanitation_condition,enum,yes,"functional, maintenance_concern, poor_quality, failed_or_exposed, unknown"
+handwashing_station,enum,yes,"water_and_soap, water_only, station_no_water, no_station, unknown"
+greywater_drainage,enum,yes,"managed, visible_stagnant_water, open_drainage, direct_discharge, unknown"
+operator_type,enum,yes,"municipal_provider, cooperative, community_committee, school_admin, clinic_admin, household, unknown"
+maintenance_pathway,enum,yes,"clear, partial, unclear, none_known, unknown"
+tariff_or_affordability_concern,enum,yes,"none_reported, minor, recurring, severe, unknown"
+water_access_risk,integer,yes,0 to 3 preliminary risk score
+sanitation_risk,integer,yes,0 to 3 preliminary risk score
+hygiene_risk,integer,yes,0 to 3 preliminary risk score
+climate_reliability_risk,integer,yes,0 to 3 preliminary risk score
+institutional_risk,integer,yes,0 to 3 preliminary risk score
+priority_index,integer,yes,Sum of five risk scores after validation
+validation_status,enum,yes,"draft, source_reviewed, partner_reviewed, field_verified, validated"
+notes_private,text,no,Private notes not for public release
+notes_public,text,yes,Generalized public notes only
+source_reference,string,yes,Source or field form reference
