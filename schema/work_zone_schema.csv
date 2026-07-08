@@ -1,0 +1,29 @@
+field_name,field_type,public_release,description
+work_zone_id,string,yes,Unique work zone identifier
+work_zone_name,string,yes,Generalized work zone name
+corridor_zone,enum,yes,"cochabamba_periurban, valle_alto, inter_valley, sucre_transition, potosi_highland_edge"
+municipality,string,yes,Municipality name
+department,string,yes,Department name
+zone_type,enum,yes,"urban, peri_urban, agricultural, rural, mountain_corridor, highland_edge, mixed"
+geometry_precision,enum,yes,"generalized_polygon, settlement_cluster, municipal_area, corridor_segment"
+primary_wash_focus,enum,yes,"water_access, water_quality, sanitation, hygiene, school_wash, clinic_wash, watershed, wastewater, mixed"
+water_access_risk,integer,yes,0 to 3 preliminary risk score
+water_quality_risk,integer,yes,0 to 3 preliminary risk score
+sanitation_risk,integer,yes,0 to 3 preliminary risk score
+hygiene_public_facility_risk,integer,yes,0 to 3 preliminary risk score
+climate_reliability_risk,integer,yes,0 to 3 preliminary risk score
+institutional_risk,integer,yes,0 to 3 preliminary risk score
+field_access_risk,integer,yes,0 to 3 where higher means more difficult or risky access
+crime_safety_field_risk,integer,yes,0 to 3 based on public and locally verified safety indicators only
+road_condition_risk,integer,yes,0 to 3
+communications_risk,integer,yes,0 to 3
+nearest_safe_base,string,yes,Recommended living/staging base
+estimated_day_trip_feasible,boolean,yes,Whether zone can be visited as a daylight day trip from safe base
+partner_required,boolean,yes,Whether local partner/municipal contact is required before fieldwork
+partner_status,enum,yes,"none, candidate, contacted, confirmed"
+clinic_access_notes,text,yes,Generalized clinic/emergency access notes
+route_notes_public,text,yes,Generalized public route notes only
+sensitive_notes_private,text,no,Private safety or contact notes not for public release
+work_zone_priority,enum,yes,"high, medium, low, defer, unknown"
+validation_status,enum,yes,"draft, source_reviewed, local_reviewed, partner_reviewed, field_verified, validated"
+source_references,text,yes,Public source references and access dates
