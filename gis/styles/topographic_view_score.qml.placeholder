@@ -1,0 +1,11 @@
+QGIS style placeholder for topographic safe-overlook score.
+
+Recommended classes:
+
+- strong public/residential overlook potential
+- good overlook potential after verification
+- partial or uncertain visibility
+- exclude or do not publish
+- not assessed
+
+Do not style or publish airport-perimeter observation points. Use generalized public/residential zones only.
