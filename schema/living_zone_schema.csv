@@ -1,0 +1,31 @@
+field_name,field_type,public_release,description
+zone_id,string,yes,Unique residential candidate zone identifier
+zone_name,string,yes,Generalized living zone name
+city,string,yes,Cochabamba or Sucre
+municipality,string,yes,Municipality name
+department,string,yes,Department name
+zone_type,enum,yes,"urban_core, residential, peri_urban, semi_rural, field_adjacent"
+geometry_precision,enum,yes,"generalized_polygon, neighborhood_label, municipal_area"
+crime_data_status,enum,yes,"not_started, public_sources_only, locally_reviewed, verified"
+crime_exposure_notes,text,yes,Generalized source-documented crime and public-safety notes only
+petty_theft_exposure,integer,yes,0 low or unknown to 3 high; source-documented only
+violent_crime_exposure,integer,yes,0 low or unknown to 3 high; source-documented only
+night_mobility_risk,integer,yes,0 low or unknown to 3 high; source-documented only
+protest_roadblock_exposure,integer,yes,0 low or unknown to 3 high; source-documented only
+transport_risk,integer,yes,0 low or unknown to 3 high; source-documented only
+secure_housing_score,integer,yes,0 to 3 where higher is better
+internet_score,integer,yes,0 to 3 where higher is better
+medical_services_score,integer,yes,0 to 3 where higher is better
+daily_services_score,integer,yes,0 to 3 where higher is better
+field_access_score,integer,yes,0 to 3 where higher is better
+support_network_score,integer,yes,0 to 3 where higher is better
+safety_score,integer,yes,0 to 3 where higher is better
+living_zone_total_score,integer,yes,Sum of positive suitability scores after review
+recommended_status,enum,yes,"preferred, suitable_after_verification, short_term_only, not_recommended, unknown"
+verification_priority,enum,yes,"high, medium, low"
+internet_verification_needed,boolean,yes,True if apartment-level fiber/speed test is needed
+housing_verification_needed,boolean,yes,True if building security verification is needed
+local_review_needed,boolean,yes,True if current local safety review is needed
+notes_public,text,yes,Generalized public notes
+notes_private,text,no,Private notes not for public release
+source_references,text,yes,Public source references and access dates
