@@ -1,6 +1,6 @@
 # WASH Bolivia: Cochabamba-Sucre Corridor
 
-Public, civic-facing research repository for Water, Sanitation, and Hygiene (WASH) review and field-planning work along the Cochabamba-Sucre corridor in Bolivia.
+Public, civic-facing research repository for Water, Sanitation, and Hygiene (WASH) review, safe-base selection, and field-planning work along the Cochabamba-Sucre corridor in Bolivia.
 
 ## Research focus
 
@@ -8,6 +8,8 @@ This repository studies the central Bolivian corridor from Cochabamba through th
 
 The work is focused on:
 
+- Safe living-zone selection before work-zone selection.
+- Crime/safety exposure, medical access, internet reliability, and transport continuity for residential base planning.
 - Drinking water access and reliability.
 - Water quality and household water safety.
 - Sanitation coverage, on-site sanitation, sewerage, wastewater, and drainage.
@@ -30,8 +32,17 @@ The work is focused on:
 - [Annotated Bibliography](docs/bibliography.md)
 - [Public Data Inventory](docs/data-inventory.md)
 - [Field Assessment Framework](docs/field-assessment-framework.md)
+- [Safety and Living-Zone Mapping Framework](docs/safety-living-zones.md)
 - [Municipal WASH Profile Template](docs/municipal-profile-template.md)
+- [GIS Mapping System](gis/README.md)
+- [GIS Layer Configuration](config/gis_layers.yaml)
 - [WASH Site Observation Schema](schema/wash_site_schema.csv)
+- [Living Zone GIS Schema](schema/living_zone_schema.csv)
+- [Work Zone GIS Schema](schema/work_zone_schema.csv)
+
+## GIS system
+
+The GIS system ranks safe living zones first, then WASH work zones second. Residential base selection considers source-documented safety exposure, secure housing, internet/fiber access, medical services, daily services, transport reliability, and support networks. Work-zone selection then evaluates WASH priority, road access, daylight-return feasibility, communications, field safety, and partner status.
 
 ## Initial source base
 
@@ -47,12 +58,13 @@ The work is focused on:
 
 ## Working hypothesis
 
-The Cochabamba-Sucre corridor should be studied as a combined WASH, watershed, and spatial-equity problem. The main field risk is not only whether a water source exists, but whether households, schools, clinics, and rural settlements have reliable, safe, affordable, and socially legitimate access across dry-season and drought-stress conditions.
+The Cochabamba-Sucre corridor should be studied as a combined safe-base, WASH, watershed, and spatial-equity problem. The main field risk is not only whether a water source exists, but whether the researcher can safely live, communicate, travel, return to base, and work with local partners while assessing whether households, schools, clinics, and rural settlements have reliable, safe, affordable, and socially legitimate WASH access across dry-season and drought-stress conditions.
 
 ## Research standards
 
 - Keep the repository public, civic-facing, scholarly, and non-operational.
 - Do not publish household-level coordinates, personally identifiable information, or sensitive community-level vulnerability data without partner approval.
+- Do not publish rumor-based crime labels or unverified neighborhood accusations.
 - Distinguish evidence from hypothesis.
 - Prefer official, peer-reviewed, municipal, NGO, and community-validated sources.
 - Use Spanish-language sources where available.
@@ -60,6 +72,8 @@ The Cochabamba-Sucre corridor should be studied as a combined WASH, watershed, a
 
 ## Near-term work plan
 
+- Build current safety-source inventory for Cochabamba and Sucre.
+- Create living-zone candidate polygons for Cochabamba and Sucre.
 - Build municipal profile sheets for Cochabamba, Sacaba, Tiquipaya, Punata, Cliza, Sucre, Yotala, and selected inter-valley communities.
 - Identify source URLs, licenses, and access dates for public GIS layers.
 - Download and document JMP Bolivia WASH indicators.
