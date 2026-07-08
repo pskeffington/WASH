@@ -1,6 +1,6 @@
 project:
   name: WASH Bolivia Cochabamba-Sucre Corridor
-  purpose: Public civic-facing WASH and safety mapping
+  purpose: Public civic-facing WASH, safety, and topographic viewpoint mapping
   default_crs: EPSG:4326
   public_release_rule: generalized layers only
 
@@ -11,6 +11,8 @@ layer_groups:
     - settlements
     - hydrology
     - elevation
+    - slope
+    - hillshade
     - public_facilities
   safety:
     - living_zones
@@ -18,6 +20,12 @@ layer_groups:
     - avoid_or_limit_zones
     - clinic_emergency_access
     - transport_nodes
+  topography:
+    - topographic_viewpoints_public
+    - viewshed_airport_generalized
+    - valley_visibility
+    - excluded_sensitive_airport_areas
+    - living_zones_with_view_score
   wash:
     - work_zones
     - water_access_risk
@@ -35,10 +43,13 @@ schemas:
   living_zones: schema/living_zone_schema.csv
   work_zones: schema/work_zone_schema.csv
   wash_sites: schema/wash_site_schema.csv
+  topographic_viewpoints: schema/topographic_viewpoint_schema.csv
 
 priority_outputs:
   - Safe living zone map: Cochabamba
   - Safe living zone map: Sucre
+  - Topographic safe-overlook map: Cochabamba
+  - Topographic safe-overlook map: Sucre and Alcantari corridor
   - WASH work zone map: Cochabamba-Sucre corridor
   - Field circuit map: safe-base to day-trip work zones
   - Non-sensitive priority index map
@@ -50,16 +61,21 @@ data_rules:
     - exact vulnerable community locations
     - personal contact information
     - rumor-based safety claims
+    - exact private residential viewpoints
+    - airport perimeter observation points
+    - operational flight timing or tracking data
   public_ok:
     - generalized neighborhood polygons
     - municipal-level WASH indicators
     - public facility points from open data
     - source-documented safety indicators
+    - generalized public viewpoints
     - validated settlement-level classifications
 
 scoring_order:
   1: living zone safety and continuity
   2: internet, medical, and daily services
-  3: safe field access and daylight return feasibility
-  4: WASH work-zone priority
-  5: partner and local validation status
+  3: topographic safe-overlook value
+  4: safe field access and daylight return feasibility
+  5: WASH work-zone priority
+  6: partner and local validation status
