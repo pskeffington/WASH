@@ -37,6 +37,7 @@ The work is focused on:
 - [Topographic Viewpoint Analysis](docs/topographic-viewpoint-analysis.md)
 - [GIS Build Plan](docs/gis-build-plan.md)
 - [Municipal WASH Profile Template](docs/municipal-profile-template.md)
+- [Cochabamba Geography Layer Manifest](gis/metadata/cochabamba_geography_manifest.md)
 - [GIS Mapping System](gis/README.md)
 - [GIS Layer Configuration](config/gis_layers.yaml)
 - [WASH Site Observation Schema](schema/wash_site_schema.csv)
@@ -52,6 +53,16 @@ The work is focused on:
 ## GIS system
 
 The GIS system ranks safe living zones first, then topographic safe-overlook value, then WASH work zones. Residential base selection considers source-documented safety exposure, secure housing, internet/fiber access, medical services, daily services, transport reliability, support networks, and lawful/public topographic visibility. Work-zone selection then evaluates WASH priority, road access, daylight-return feasibility, communications, field safety, and partner status.
+
+## Cochabamba geography pull
+
+Run locally:
+
+```bash
+python scripts/download_cochabamba_geography.py
+```
+
+The downloader stages public geography sources under `gis/layers/raw/cochabamba/`, writes source metadata, and prepares the target structure for reviewed processed layers under `gis/layers/processed/cochabamba/`.
 
 ## Initial source base
 
@@ -82,6 +93,8 @@ The Cochabamba-Sucre corridor should be studied as a combined safe-base, topogra
 
 ## Near-term work plan
 
+- Run the Cochabamba geography downloader and inspect source layers in QGIS.
+- Clip public layers to Cochabamba Department and metropolitan safe-base study area.
 - Build current safety-source inventory for Cochabamba and Sucre.
 - Convert seed living-zone and topographic-viewpoint candidates into generalized GeoJSON layers.
 - Add DEM, slope, hillshade, and generalized viewshed analysis for safe public/residential viewpoints.
