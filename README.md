@@ -27,7 +27,11 @@ The work is focused on:
 ## Repository documents
 
 - [Literature Review: Cochabamba-Sucre WASH Corridor](docs/literature-review.md)
+- [Annotated Bibliography](docs/bibliography.md)
+- [Public Data Inventory](docs/data-inventory.md)
 - [Field Assessment Framework](docs/field-assessment-framework.md)
+- [Municipal WASH Profile Template](docs/municipal-profile-template.md)
+- [WASH Site Observation Schema](schema/wash_site_schema.csv)
 
 ## Initial source base
 
@@ -38,6 +42,8 @@ The work is focused on:
 - William Finnegan, "Leasing the Rain," The New Yorker, 2002: https://www.newyorker.com/magazine/2002/04/08/leasing-the-rain
 - Bolivia water resources management overview: https://en.wikipedia.org/wiki/Water_resources_management_in_Bolivia
 - Bolivia agriculture and runoff background: https://en.wikipedia.org/wiki/Agriculture_in_Bolivia
+- Urban morphology and water scarcity method reference: https://arxiv.org/abs/2402.06676
+- Public geospatial WASH mapping method reference: https://arxiv.org/abs/2111.04134
 
 ## Working hypothesis
 
@@ -54,8 +60,9 @@ The Cochabamba-Sucre corridor should be studied as a combined WASH, watershed, a
 
 ## Near-term work plan
 
-- Build a bibliography organized by WASH theme and corridor zone.
-- Identify public datasets for settlements, roads, rivers, catchments, schools, clinics, and municipal boundaries.
-- Draft municipal profile sheets for Cochabamba, Punata, Cliza, Sucre, and selected inter-valley communities.
-- Create a GIS schema for non-sensitive WASH gap mapping.
+- Build municipal profile sheets for Cochabamba, Sacaba, Tiquipaya, Punata, Cliza, Sucre, Yotala, and selected inter-valley communities.
+- Identify source URLs, licenses, and access dates for public GIS layers.
+- Download and document JMP Bolivia WASH indicators.
+- Add Spanish-language ministry, municipal, and university sources.
+- Create a non-sensitive GIS workflow for corridor WASH priority mapping.
 - Prepare a partner-facing concept note for municipal, NGO, parish, university, or public-health collaboration.
