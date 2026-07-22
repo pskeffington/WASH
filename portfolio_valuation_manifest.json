@@ -1,0 +1,21 @@
+{
+  "schema_version":"portfolio-valuation-manifest/v1",
+  "repository":"pskeffington/WASH",
+  "portfolio_valuator":"pskeffington/Portfolio",
+  "valuation_status":"aligned_internal_estimate",
+  "market_lane":"public-health research / WASH methods",
+  "maturity_stage":"active",
+  "evidence_grade":"B",
+  "product_surface":"manuscript_report_scaffold",
+  "integration_role":"shared WASH methods and public-health evidence layer",
+  "public_safety_status":"clean",
+  "risk_level":"medium",
+  "current_value_range_usd":{"low":50000,"high":300000},
+  "forward_value_range_usd":{"low":500000,"high":3000000},
+  "collateral_treatment":"Research asset only until reproducible methods, validation, adoption, and financial evidence are established.",
+  "evidence_paths":["README.md","portfolio_valuation_manifest.json"],
+  "next_value_unlocks":["consolidate methods","link active WASH projects","publish bounded validation outputs"],
+  "missing_financial_inputs":["revenue","contracts","grant awards","third-party validation","independent appraisal"],
+  "claim_boundary":"No public-health effectiveness, field-readiness, institutional endorsement, or operational claim.",
+  "last_aligned_on":"2026-07-21"
+}
