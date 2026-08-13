@@ -1,31 +1,44 @@
-# WASH Bolivia: Cochabamba-Sucre Corridor
+# WASH Bolivia — Cochabamba–Sucre Corridor
 
-Public, civic-facing research repository for Water, Sanitation, and Hygiene (WASH) review, safe-base selection, topographic viewpoint analysis, and field-planning work along the Cochabamba-Sucre corridor in Bolivia.
+Public, civic-facing research repository for Water, Sanitation, and Hygiene (WASH), watershed stress, service reliability, and spatial equity along the Cochabamba–Sucre corridor in Bolivia.
+
+**Maintainer:** Paul Skeffington, MS, MPH  
+**Repository status:** active WASH systems and spatial-analysis research scaffold.  
+**Last documentation review:** 2026-08-12
+
+## Public-interest research boundary
+
+This repository is maintained for public-health scholarship, environmental-health research, open-data methods, GIS analysis, and reproducible documentation.
+
+It does not provide travel-security guidance, residential site selection, surveillance or observation planning, operational field tasking, household-level vulnerability findings, infrastructure targeting, clinical determinations, or policy mandates. Public geospatial outputs should remain appropriately generalized and should not expose sensitive household, facility, or infrastructure details.
 
 ## Research focus
 
-This repository studies the central Bolivian corridor from Cochabamba through the inter-Andean valley and mountain corridor toward Sucre, with secondary attention to Potosi-linked highland water-quality and water-scarcity concerns.
+This repository studies WASH conditions and environmental-health systems across the central Bolivian corridor from Cochabamba through inter-Andean communities toward Sucre, with contextual attention to highland water scarcity and water-quality concerns where supported by evidence.
 
-The work is focused on:
+Primary domains include:
 
-- Safe living-zone selection before work-zone selection.
-- Topographic analysis for lawful, safe, public-facing valley and airport-overlook visibility.
-- Crime/safety exposure, medical access, internet reliability, and transport continuity for residential base planning.
-- Drinking water access and reliability.
-- Water quality and household water safety.
-- Sanitation coverage, on-site sanitation, sewerage, wastewater, and drainage.
-- Hygiene access in households, schools, clinics, and public facilities.
-- Watershed protection, drought stress, and climate-resilient WASH.
-- Community water systems, cooperatives, municipal providers, and local water governance.
-- GIS-based spatial equity mapping using non-sensitive public-interest data.
+- drinking-water access, continuity, affordability, and reliability;
+- water quality and household water safety at appropriate aggregation levels;
+- sanitation coverage, sewerage, onsite sanitation, wastewater, and drainage;
+- hygiene access in households, schools, clinics, and public facilities;
+- watershed protection, drought stress, and climate-resilient WASH;
+- community water systems, cooperatives, municipal providers, and local water governance;
+- rural and peri-urban service disparities;
+- GIS-based spatial equity analysis using non-sensitive public-interest data;
+- source provenance, uncertainty, and reproducibility.
 
-## Corridor zones
+## Core research question
 
-1. **Cochabamba metropolitan and peri-urban edge** — municipal service reliability, peri-urban growth, water affordability, wastewater, and community systems.
-2. **Valle Alto agricultural towns** — Punata, Cliza, and nearby rural/agricultural communities; irrigation overlap, runoff, sanitation, and rural water reliability.
-3. **Inter-valley mountain corridor** — dispersed settlements, springs, gravity-fed systems, road access, dry-season stress, and system maintenance.
-4. **Sucre municipal-rural transition** — urban service extension, peri-urban sanitation, public-facility WASH, and nearby Chuquisaca communities.
-5. **Potosi-linked highland edge** — water scarcity, mining legacy, metal-contamination screening where relevant, and highland service reliability.
+How do water access, sanitation, hygiene, watershed stress, service governance, and geographic isolation vary across the Cochabamba–Sucre corridor, and how can those differences be documented reproducibly using public and community-validated evidence?
+
+## Study zones
+
+1. **Cochabamba metropolitan and peri-urban edge** — service reliability, peri-urban growth, affordability, wastewater, and community systems.
+2. **Valle Alto agricultural towns** — rural water reliability, sanitation, irrigation overlap, runoff, and seasonal stress.
+3. **Inter-valley communities** — dispersed settlement patterns, springs, gravity-fed systems, road accessibility, dry-season stress, and system maintenance.
+4. **Sucre municipal-rural transition** — service extension, peri-urban sanitation, public-facility WASH, and nearby Chuquisaca communities.
+5. **Highland contextual layer** — water scarcity and water-quality concerns where supported by authoritative or peer-reviewed sources.
 
 ## Repository documents
 
@@ -33,74 +46,70 @@ The work is focused on:
 - [Annotated Bibliography](docs/bibliography.md)
 - [Public Data Inventory](docs/data-inventory.md)
 - [Field Assessment Framework](docs/field-assessment-framework.md)
-- [Safety and Living-Zone Mapping Framework](docs/safety-living-zones.md)
-- [Topographic Viewpoint Analysis](docs/topographic-viewpoint-analysis.md)
 - [GIS Build Plan](docs/gis-build-plan.md)
 - [Municipal WASH Profile Template](docs/municipal-profile-template.md)
 - [Cochabamba Geography Layer Manifest](gis/metadata/cochabamba_geography_manifest.md)
 - [GIS Mapping System](gis/README.md)
 - [GIS Layer Configuration](config/gis_layers.yaml)
 - [WASH Site Observation Schema](schema/wash_site_schema.csv)
-- [Living Zone GIS Schema](schema/living_zone_schema.csv)
-- [Work Zone GIS Schema](schema/work_zone_schema.csv)
-- [Topographic Viewpoint GIS Schema](schema/topographic_viewpoint_schema.csv)
 
-## Seed datasets
+Legacy planning documents that are unrelated to WASH research should be treated as historical artifacts and excluded from the current research surface.
 
-- [Living Zone Candidates](data/seed/living_zones_seed.csv)
-- [Topographic Viewpoint Candidates](data/seed/topographic_viewpoints_seed.csv)
+## GIS research system
 
-## GIS system
+The GIS layer should support descriptive mapping of WASH access, service reliability, environmental context, and spatial inequity. It should prioritize public, appropriately licensed, non-sensitive data and preserve source metadata for every layer.
 
-The GIS system ranks safe living zones first, then topographic safe-overlook value, then WASH work zones. Residential base selection considers source-documented safety exposure, secure housing, internet/fiber access, medical services, daily services, transport reliability, support networks, and lawful/public topographic visibility. Work-zone selection then evaluates WASH priority, road access, daylight-return feasibility, communications, field safety, and partner status.
+Appropriate analyses include municipal or regional comparisons, service-area context, watershed relationships, drought exposure, travel-time accessibility at generalized resolution, and public-facility WASH context.
 
-## Cochabamba geography pull
+Avoid publishing precise household coordinates, sensitive infrastructure locations, restricted facilities, or geospatial outputs that could create security or privacy risks.
 
-Run locally:
+## Initial source hierarchy
+
+Priority sources should be verified and logged before research use. Prefer:
+
+1. official Bolivian national, departmental, and municipal sources;
+2. WHO/UNICEF Joint Monitoring Programme and other UN sources;
+3. peer-reviewed literature;
+4. university, NGO, utility, cooperative, and community-validated sources with documented provenance;
+5. reputable secondary sources for historical context only.
+
+General-reference sources such as Wikipedia may be useful for orientation but should not serve as manuscript-weight evidence when authoritative or peer-reviewed sources are available.
+
+## Data and documentation standards
+
+- Record source URL, publisher, publication/update date, access date, geography, license, and verification status.
+- Distinguish observed data, modeled estimates, historical context, and research hypotheses.
+- Use Spanish-language and local sources where available.
+- Preserve administrative-boundary versions and geospatial processing steps.
+- Document missingness, temporal mismatch, and uncertainty before comparing municipalities or communities.
+- Treat local water governance as a social and institutional system, not solely an engineering variable.
+- Do not commit personally identifying information, restricted partner data, household-level vulnerability coordinates, or sensitive infrastructure details.
+
+## Reproducible geography workflow
+
+A public geography downloader is available for reproducible staging of source layers:
 
 ```bash
 python scripts/download_cochabamba_geography.py
 ```
 
-The downloader stages public geography sources under `gis/layers/raw/cochabamba/`, writes source metadata, and prepares the target structure for reviewed processed layers under `gis/layers/processed/cochabamba/`.
+Downloaded sources should remain subject to their original licenses and redistribution terms. Processed layers should retain source metadata and transformation notes.
 
-## Initial source base
+## Near-term research plan
 
-- WHO/UNICEF Joint Monitoring Programme household WASH data and SDG 6 monitoring: https://washdata.org/data/household
-- UNICEF Bolivia country office, reports, and child-priority framework: https://www.unicef.org/bolivia/en
-- Bolivia water supply and sanitation sector overview: https://en.wikipedia.org/wiki/Water_supply_and_sanitation_in_Bolivia
-- Cochabamba Water War governance background: https://en.wikipedia.org/wiki/Cochabamba_Water_War
-- William Finnegan, "Leasing the Rain," The New Yorker, 2002: https://www.newyorker.com/magazine/2002/04/08/leasing-the-rain
-- Bolivia water resources management overview: https://en.wikipedia.org/wiki/Water_resources_management_in_Bolivia
-- Bolivia agriculture and runoff background: https://en.wikipedia.org/wiki/Agriculture_in_Bolivia
-- Urban morphology and water scarcity method reference: https://arxiv.org/abs/2402.06676
-- Public geospatial WASH mapping method reference: https://arxiv.org/abs/2111.04134
+1. Refresh the public data inventory and bibliography with authoritative Bolivian, JMP, peer-reviewed, and Spanish-language sources.
+2. Remove or archive legacy non-WASH planning objects from the active research surface.
+3. Download and document current JMP Bolivia WASH indicators.
+4. Build municipal profile sheets for selected Cochabamba, Valle Alto, inter-valley, and Sucre-area communities.
+5. Establish a reproducible GIS workflow for WASH access, watershed stress, and spatial equity.
+6. Add explicit uncertainty and temporal-harmonization rules for cross-source comparisons.
+7. Develop a partner-facing research concept note for municipal, university, NGO, public-health, or community-water-system collaboration.
+8. Connect validated outputs to the broader public-health portfolio evidence ledger.
 
-## Working hypothesis
+## Supported contribution
 
-The Cochabamba-Sucre corridor should be studied as a combined safe-base, topographic, WASH, watershed, and spatial-equity problem. The main field risk is not only whether a water source exists, but whether the researcher can safely live, communicate, travel, return to base, and work with local partners while assessing whether households, schools, clinics, and rural settlements have reliable, safe, affordable, and socially legitimate WASH access across dry-season and drought-stress conditions.
+A reproducible WASH systems and spatial-equity research framework for studying service reliability, sanitation, hygiene, watershed stress, governance, and geographic disparities in the Cochabamba–Sucre corridor.
 
-## Research standards
+## Unsupported contribution
 
-- Keep the repository public, civic-facing, scholarly, and non-operational.
-- Do not publish household-level coordinates, personally identifiable information, or sensitive community-level vulnerability data without partner approval.
-- Do not publish rumor-based crime labels or unverified neighborhood accusations.
-- Do not publish precise airport-perimeter observation points, restricted-area details, operational flight timing, or tracking data.
-- Distinguish evidence from hypothesis.
-- Prefer official, peer-reviewed, municipal, NGO, and community-validated sources.
-- Use Spanish-language sources where available.
-- Treat local water governance as a social institution, not only an engineering problem.
-
-## Near-term work plan
-
-- Run the Cochabamba geography downloader and inspect source layers in QGIS.
-- Clip public layers to Cochabamba Department and metropolitan safe-base study area.
-- Build current safety-source inventory for Cochabamba and Sucre.
-- Convert seed living-zone and topographic-viewpoint candidates into generalized GeoJSON layers.
-- Add DEM, slope, hillshade, and generalized viewshed analysis for safe public/residential viewpoints.
-- Build municipal profile sheets for Cochabamba, Sacaba, Tiquipaya, Punata, Cliza, Sucre, Yotala, and selected inter-valley communities.
-- Identify source URLs, licenses, and access dates for public GIS layers.
-- Download and document JMP Bolivia WASH indicators.
-- Add Spanish-language ministry, municipal, and university sources.
-- Create a non-sensitive GIS workflow for corridor WASH priority mapping.
-- Prepare a partner-facing concept note for municipal, NGO, parish, university, or public-health collaboration.
+No travel-security recommendation, residential-base recommendation, surveillance or observation guidance, operational field prioritization, household-level risk determination, infrastructure targeting, or policy mandate is made.
