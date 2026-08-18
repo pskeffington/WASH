@@ -1,174 +1,114 @@
-# Field Assessment Framework: Cochabamba-Sucre WASH Corridor
+# Research Observation Framework: Cochabamba-Sucre WASH Corridor
 
 ## Purpose
 
-This framework translates the initial literature review into a field-ready, partner-facing assessment structure. It is designed for civic research, municipal planning support, NGO coordination, parish/community partnership, and public-health engagement.
+This document defines a research-oriented observation and data-collection framework for studying WASH conditions in the Cochabamba-Sucre corridor. It is intended for scholarly protocol design, synthetic or appropriately governed field-method development, partner review, and reproducible documentation.
+
+It is not a deployment plan, inspection authority, emergency-response protocol, site-prioritization system, or substitute for local ethical, institutional, community, or regulatory approval.
 
 ## Principles
 
-- Public-interest purpose only.
-- Community consent and local institutional awareness before field data collection.
-- No publication of household-level locations or personally identifying data.
-- Separate observation, interview, administrative record, and laboratory evidence.
+- Public-interest research purpose only.
+- Community consent and appropriate institutional review before any real-world data collection.
+- No publication of household-level locations or personally identifying information.
+- Separate observation, interview, administrative-record, laboratory, and modeled evidence.
 - Treat water systems as social, institutional, technical, and ecological systems.
-- Validate GIS findings with local partners before publishing maps.
+- Validate interpretations with local partners before publication.
+- Do not convert descriptive scores into operational rankings, enforcement decisions, funding decisions, or claims of current hazard without independent verification.
 
-## Assessment units
+## Candidate research units
 
-### Household or compound-level observation
+### Household or compound-level research observation
 
-Use only with consent and do not publish identifiable location data.
+Use only under an approved research or partner-governed protocol with consent. Public outputs should be aggregated or otherwise de-identified.
 
-Core fields:
+Candidate variables include:
 
-- Main drinking-water source.
-- Secondary or backup water source.
-- Continuity of service by season.
-- Distance/time to source if not on premises.
-- Household storage method.
-- Visible contamination risk around storage.
-- Household water treatment behavior.
-- Toilet or latrine type.
-- Shared or private sanitation.
-- Handwashing station presence.
-- Soap or cleansing agent presence.
-- Greywater/drainage condition.
-- Stated dry-season stress.
-- Stated affordability or tariff concern.
+- primary and backup drinking-water source;
+- service continuity and seasonal variability;
+- time or distance to source where applicable;
+- storage and household treatment practices;
+- sanitation type and sharing status;
+- handwashing access;
+- drainage context;
+- reported dry-season stress; and
+- affordability or tariff concerns.
 
-### Community water-system observation
+### Community water-system research record
 
-Core fields:
+Candidate variables include:
 
-- System type: municipal network, cooperative, community committee, spring, well, borehole, tank, trucked water, gravity-fed system, rainwater, mixed system.
-- Operator or governance model.
-- Approximate service population.
-- Seasonal reliability.
-- Maintenance routine.
-- Chlorination or treatment method.
-- Water-quality testing frequency.
-- Storage/tank condition.
-- Source-protection status.
-- Tariff or contribution system.
-- Known disputes or governance issues.
+- system type and governance model;
+- approximate service population;
+- seasonal reliability;
+- treatment and testing practices;
+- maintenance arrangements;
+- storage and source-protection context;
+- tariff or contribution structure; and
+- documented governance or maintenance challenges.
 
-### School WASH observation
+### School and health-facility WASH research records
 
-Core fields:
+Candidate variables may include water continuity, hand-hygiene infrastructure, sanitation availability, accessibility, waste and drainage context, maintenance responsibility, and documented backup arrangements.
 
-- Drinking water available during school day.
-- Handwashing stations available and functional.
-- Soap availability.
-- Toilets functional, clean, and gender separated.
-- Menstrual health facilities and disposal.
-- Disability access.
-- Water storage condition.
-- Waste disposal and drainage.
-- Hygiene education materials.
-- Cleaning and maintenance responsibility.
+These observations do not establish regulatory compliance, infection-control adequacy, facility safety, or institutional performance.
 
-### Health-facility WASH observation
+### Settlement and GIS research record
 
-Core fields:
+Candidate fields include:
 
-- Continuous water availability.
-- Hand hygiene at points of care.
-- Patient toilet availability.
-- Staff toilet availability.
-- Cleaning water and supplies.
-- Medical waste segregation.
-- Sharps disposal.
-- Wastewater/drainage condition.
-- Emergency backup water.
-- Infection prevention linkages.
+- municipality or generalized settlement geography;
+- elevation and terrain class;
+- generalized road-access or travel-time class;
+- distance classes to public services;
+- public WASH infrastructure context;
+- watershed or drainage context;
+- drought or flood indicators; and
+- urban, peri-urban, agricultural, rural, or highland context.
 
-### Settlement and GIS observation
+Precise household, sensitive facility, or infrastructure coordinates should be excluded from public outputs.
 
-Core fields:
+## Descriptive coding
 
-- Settlement name and municipality.
-- Non-sensitive centroid or generalized location.
-- Elevation.
-- Road access and travel-time class.
-- Distance to main road.
-- Distance to health facility.
-- Distance to school.
-- Visible water infrastructure.
-- Visible drainage or wastewater issue.
-- Nearby stream, canal, reservoir, or spring.
-- Drought or flood exposure indicators.
-- Land-use context: urban, peri-urban, agricultural, rural, highland, mining-adjacent.
+Ordinal coding may be used for exploratory comparison when definitions, sources, missingness, and uncertainty are explicit. Any such coding should be described as a research construct rather than a definitive risk score.
 
-## Preliminary scoring model
+Example domains may include:
 
-Scores are for internal prioritization only until locally validated.
+- water-access reliability;
+- sanitation conditions;
+- hygiene access;
+- climate and seasonal reliability; and
+- governance or maintenance context.
 
-### Water access risk
+Do not label communities, households, facilities, or systems as "safe," "unsafe," "critical," or operationally prioritized solely from repository-derived scores. Any composite index requires separate methodological justification, sensitivity analysis, and local validation before scholarly use.
 
-- 0: reliable piped water on premises, adequate continuity.
-- 1: improved source but intermittent service or seasonal reliability concern.
-- 2: non-networked source, long collection time, trucked water, or frequent interruptions.
-- 3: unsafe source, severe seasonal failure, or repeated contamination concern.
+## Research-governance requirements
 
-### Sanitation risk
+Before real-world collection, document as applicable:
 
-- 0: functional private sanitation with safe containment or sewerage.
-- 1: functional sanitation with maintenance or drainage concerns.
-- 2: shared, poor-quality, damaged, or poorly contained sanitation.
-- 3: open defecation risk, failed containment, or direct discharge exposure.
+- research or program purpose;
+- consent process;
+- institutional or partner authorization;
+- source and data-rights constraints;
+- privacy and coordinate-handling rules;
+- quality-control procedures;
+- referral boundaries for observations that may indicate urgent concerns; and
+- publication and community-review procedures.
 
-### Hygiene access risk
+The repository itself does not confer authority to conduct inspections, enter facilities, collect samples, interview participants, or recommend interventions.
 
-- 0: handwashing station with water and soap available.
-- 1: handwashing station available but intermittent water or soap.
-- 2: no reliable station near toilet or food-preparation area.
-- 3: no practical handwashing access observed.
+## Candidate research outputs
 
-### Climate and reliability risk
+- literature review;
+- non-sensitive corridor WASH maps;
+- source and bibliography registries;
+- municipal or regional profile sheets;
+- school/clinic WASH research templates;
+- community water-system typologies;
+- methods notes;
+- research ethics and data-protection documentation; and
+- reproducible descriptive analyses with explicit limitations.
 
-- 0: no reported seasonal water stress.
-- 1: minor dry-season restrictions.
-- 2: recurring dry-season shortages or backup-source dependence.
-- 3: severe drought vulnerability or regular service failure.
+## Interpretation boundary
 
-### Institutional risk
-
-- 0: clear operator, maintenance pathway, and payment structure.
-- 1: operator exists but maintenance, tariff, or monitoring gaps are reported.
-- 2: unclear responsibility or weak maintenance capacity.
-- 3: active conflict, abandoned infrastructure, or no known responsible operator.
-
-## Priority index
-
-A simple starting index may sum the five risk scores:
-
-- 0-3: lower immediate concern.
-- 4-7: moderate concern; monitor and verify.
-- 8-11: high concern; prioritize partner review.
-- 12-15: critical concern; requires careful validation and partner-led response planning.
-
-This score should not be published as a definitive ranking without local validation.
-
-## Minimum field kit
-
-- Printed consent and explanation sheet in Spanish.
-- GPS-capable device, configured to generalize or protect sensitive coordinates.
-- Water-quality test kit appropriate to the study design.
-- Turbidity tube or meter.
-- Residual chlorine test method.
-- Sanitary inspection forms.
-- Camera only where permitted.
-- Notebook and structured forms.
-- Community-contact log.
-- Referral list for urgent public-health or infrastructure concerns.
-
-## Outputs
-
-- Literature review.
-- Non-sensitive corridor WASH map.
-- Bibliography by theme and zone.
-- Municipal profile sheets.
-- School/clinic WASH checklist.
-- Community water-system typology.
-- Partner concept note.
-- Research ethics and data-protection note.
+Observations and derived measures support research documentation only. They do not independently establish causation, regulatory noncompliance, current public-health emergency status, infrastructure failure, household vulnerability, or a requirement for partner-led response.
