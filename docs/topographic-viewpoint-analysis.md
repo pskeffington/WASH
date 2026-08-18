@@ -1,169 +1,33 @@
-# Topographic Viewpoint Analysis: Safe Living Zones and Airport Overlook Criteria
+# Archived Planning Note: Topographic Viewpoint Analysis
 
-## Purpose
+## Status
 
-This document adds a topographic viewshed layer to the WASH Bolivia GIS system. The goal is to identify legal, safe, public-facing residential or observation areas with broad valley visibility, including places where aircraft can be seen from a distance during ordinary airport arrivals and departures.
+This file is retained only as a historical record of an earlier planning direction. It is **not part of the active WASH research surface** and should not be used to identify observation locations, assess airport visibility, select residential viewpoints, or plan travel or field activity.
 
-This is not an aviation operations document. It should not be used for interference with airports, restricted areas, military facilities, flight operations, or airport perimeter activity.
+The active project is a public, civic-facing WASH and spatial-equity research repository. Current geospatial work should address water access, sanitation, hygiene, watershed stress, service reliability, environmental context, and spatial inequity using non-sensitive public-interest data.
 
-## Core principle
+## Why this note is archived
 
-Use terrain and lawful public access to select safe overlooks. Do not select airport-adjacent, restricted, isolated, or security-sensitive locations.
+Earlier versions combined terrain analysis with airport-viewpoint, residential-siting, and observation-planning criteria. Those topics are unrelated to the present WASH research question and are excluded from current repository scope.
 
-Preferred locations are elevated residential or public-view areas that also score well for safe living, secure housing, internet, medical access, and transport.
+## Current GIS boundary
 
-## Airport context for the corridor
+Appropriate topographic analysis includes:
 
-### Cochabamba: Jorge Wilstermann International Airport
+- elevation, slope, watershed, drought, and terrain context relevant to WASH;
+- generalized travel-time or accessibility analysis for public-health research;
+- municipal or regional service-equity comparisons;
+- reproducible geospatial processing with documented sources and uncertainty; and
+- aggregation or withholding where precise locations could create privacy or infrastructure sensitivity.
 
-- Airport: Jorge Wilstermann International Airport.
-- City served: Cochabamba.
-- Airport elevation is approximately 8,360 ft.
-- Publicly reported runway orientations include 14/32 and 04/22.
-- GIS implication: because the airport sits within the Cochabamba basin, residential hill-edge or slope-zone views may provide broad views over the urban valley. Viewpoint selection should prioritize safe residential districts and avoid airport-perimeter proximity.
+Do not use this repository to:
 
-### Sucre: Alcantari International Airport
+- identify airport or infrastructure observation points;
+- evaluate line of sight to airports or restricted facilities;
+- rank residential areas for viewing or personal-security purposes;
+- publish sensitive or precise location associations; or
+- convert terrain analysis into surveillance, monitoring, travel-security, or operational field guidance.
 
-- Airport: Alcantari International Airport.
-- City served: Sucre.
-- Location: Yamparaez municipality, southeast of Sucre.
-- Airport elevation is approximately 3,104 m / 10,184 ft.
-- Publicly reported runway orientation is 18/36.
-- GIS implication: Sucre viewing candidates should be assessed from elevated public/residential areas with long-distance visibility toward the airport plateau, while recognizing that Alcantari is outside Sucre proper and may require separate field verification.
+## Historical-use rule
 
-## Topographic analysis method
-
-### 1. Build base elevation model
-
-Use a public DEM such as SRTM, NASADEM, or Copernicus DEM.
-
-Required derived rasters:
-
-- Elevation.
-- Slope.
-- Aspect.
-- Terrain ruggedness.
-- Hillshade.
-- Viewshed raster from candidate observation points.
-
-### 2. Define candidate viewpoint zones
-
-A viewpoint candidate should be a generalized polygon or point cluster, not a private address.
-
-Candidate types:
-
-- Residential hill-edge zones.
-- Public miradors or parks.
-- University or institutional hilltop areas where publicly accessible.
-- Secure apartment zones with valley views.
-- Café/hotel terrace zones only where lawful and public.
-
-Avoid:
-
-- Airport perimeter roads.
-- Restricted airport or military areas.
-- Isolated night-access roads.
-- Informal trespass routes.
-- Locations requiring unsafe transport or unverified local access.
-
-### 3. Viewshed criteria
-
-For each candidate viewpoint, calculate:
-
-- Elevation advantage over nearby valley floor.
-- Line of sight toward airport area, generalized.
-- Visible valley area.
-- Slope and terrain accessibility.
-- Road access and return-to-base feasibility.
-- Daytime and nighttime safety context.
-- Internet and living-zone suitability if residential.
-
-### 4. Safety-first filtering
-
-A topographic viewpoint should be discarded if it fails living-zone safety criteria.
-
-Discard conditions:
-
-- High or unverified crime exposure.
-- Poor night transport or isolated access.
-- No nearby clinic/pharmacy/service access.
-- Weak communications or no verified internet.
-- Unclear legal/public access.
-- Any airport-security concern.
-
-## Candidate analysis logic
-
-### Cochabamba
-
-Priority should be given to safe residential zones with valley visibility:
-
-- Recoleta: potential café/residential overlook value; verify exact slope, night safety, and petty-theft exposure.
-- Cala Cala: likely stronger long-term residential base; identify buildings or public streets with valley views.
-- Queru Queru: assess quiet residential overlooks and secure housing.
-- Tupuraya: evaluate university/clinic proximity plus slope visibility.
-- Tiquipaya: possible semi-rural views and watershed access, but transport and nighttime return must be verified.
-
-### Sucre
-
-Priority should be given to safe residential and public viewpoint areas:
-
-- La Recoleta: potential scenic overlook candidate; verify safety, slope, transport, and actual line of sight toward airport approaches.
-- Centro Historico upper edges: possible short-term base with visibility, but tourist/petty-theft exposure must be reviewed.
-- Zona Norte / Avenida de las Americas side: evaluate longer-stay residential suitability and sightlines.
-- Yotala/outskirts: do not use as first base unless local support, transport, internet, and safety are verified.
-
-## Scoring model
-
-Use a 0-3 score where higher is better unless marked as risk.
-
-### Elevation and view score
-
-- 0: no useful line of sight or blocked by terrain/buildings.
-- 1: partial valley visibility.
-- 2: good generalized airport-valley visibility.
-- 3: strong broad valley visibility from safe public/residential area.
-
-### Access safety score
-
-- 0: unsafe, restricted, isolated, or unverified.
-- 1: usable only with local support.
-- 2: generally usable during daytime.
-- 3: safe public/residential access with reliable transport.
-
-### Living suitability score
-
-- 0: not suitable as living base.
-- 1: short-term only.
-- 2: suitable after housing/internet verification.
-- 3: preferred residential base candidate.
-
-### Airport-security sensitivity risk
-
-- 0: no concern; distant generalized public view.
-- 1: minor concern; requires local verification.
-- 2: near sensitive facility or perimeter; avoid publishing details.
-- 3: restricted/perimeter/security-sensitive; exclude.
-
-## Output layers
-
-- `topographic_viewpoints_public`: generalized safe public/residential viewpoints.
-- `viewshed_airport_generalized`: broad, non-sensitive visibility zones.
-- `excluded_sensitive_airport_areas`: generalized exclusion layer for airport perimeter and restricted/security-sensitive areas.
-- `living_zones_with_view_score`: safe living zones joined to topographic visibility score.
-
-## Data-protection and safety rules
-
-- Do not publish exact private residential viewpoints.
-- Do not publish precise airport-perimeter observation points.
-- Do not publish operational flight timing, surveillance, tracking, or restricted-area details.
-- Use only public, legal, civic-facing observation context.
-- Keep airport observation subordinate to residential safety and WASH field planning.
-
-## Immediate GIS tasks
-
-1. Add DEM source to `docs/data-inventory.md`.
-2. Create `schema/topographic_viewpoint_schema.csv`.
-3. Add candidate viewpoint zones for Cochabamba and Sucre.
-4. Run viewshed analysis using QGIS from generalized public/residential candidate points.
-5. Join viewpoint score to `living_zones`.
-6. Rank zones by combined safety, internet, medical access, living suitability, and topographic view.
+If older commits are consulted for research-history purposes, treat airport-visibility, residential-viewpoint, and observation-planning material as superseded and outside the active project boundary.
