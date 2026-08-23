@@ -1,178 +1,161 @@
-# Annotated Bibliography: Cochabamba-Sucre WASH Corridor
+# Annotated Bibliography: Alternative Water Collection Systems
 
 ## Purpose
 
-This bibliography organizes the next research pass for the WASH Bolivia corridor project. It separates official monitoring sources, Bolivia-specific sector sources, Cochabamba water-governance literature, climate and watershed materials, sanitation and pollution sources, and geospatial WASH methods.
+This bibliography supports the active physics-first WASH research lane on low-cost alternative water collection. Priority is given to peer-reviewed field experiments, reviews, and standard methods that can inform prototypes made from common or salvaged materials.
 
-## 1. Official WASH monitoring and global standards
+All prototype implications remain non-potable by default until material safety and water quality are independently validated.
 
-### WHO/UNICEF Joint Monitoring Programme (JMP)
+## 1. Passive radiative dew collection
 
-Source: https://washdata.org/data/household
+### Khalil et al. (2016) — review of passive and active dew collection
 
-Use:
+**Citation:** Khalil, B., Adamowski, J., Shabbir, A., Jang, C., Rojas, M., Reilly, K., & Ozga-Zielinski, B. *A review: dew water collection from radiative passive collectors to recent developments of active collectors.* Sustainable Water Resources Management, 2, 71-86. DOI: 10.1007/s40899-015-0038-z.
 
-- Baseline household WASH indicators for Bolivia.
-- Urban/rural comparisons.
-- Service ladder definitions for drinking water, sanitation, and hygiene.
-- Comparison vocabulary for schools, health-care facilities, inequalities, and climate-resilient WASH.
+**Key findings:**
 
-Repository use:
+- Dew forms when collector surface temperature falls below atmospheric dew point.
+- Radiative passive collectors require no external energy input.
+- Typical reported maximum yields for 1 m2 passive condensers in favorable arid/semi-arid environments are about 0.3-0.6 L/day.
+- The review cites an approximate radiative upper limit near 0.8 L/m2/day.
+- Favorable conditions include high humidity, high sky visibility, low cloud cover, and low but non-zero wind.
+- Ground-coupled cooling is identified as one pathway for reducing the energy burden of active condensation.
 
-- Treat JMP terms as the primary indicator vocabulary.
-- Avoid inventing local scoring language that conflicts with SDG 6 and JMP service ladders.
-- Download Bolivia-specific data in a later data pass and cite version/date.
+**Repository implication:**
 
-### UNICEF Bolivia
+Use 0.3-0.6 L/m2/day as a favorable-condition benchmark, not a McDowell guarantee. Treat radiative panels as the zero-energy control against which cooled prototypes are compared.
 
-Source: https://www.unicef.org/bolivia/en
+### Sharan — Kutch passive condenser experiments
 
-Use:
+**Source:** Indian Institute of Management Ahmedabad working paper, *Dew yield from passive Condensers in a coastal arid Area - Kutch*.
 
-- Child-centered country context.
-- School WASH and child-health framing.
-- Public-health and vulnerability context.
+**Key findings:**
 
-Repository use:
+- Compared six inexpensive condenser materials, including aluminum, galvanized iron, polyethylene, coated polyethylene, and fiber-reinforced plastics.
+- Test panels were 1 x 1 m and insulated with approximately 25 mm styrene foam.
+- Panels were inclined approximately 30 degrees from horizontal.
+- Condensate drained by gravity to a collection vessel.
+- Meteorological conditions were logged continuously.
 
-- Connect WASH research to schools, child health, nutrition, hygiene access, and rural equity.
-- Prioritize school and clinic WASH assessment modules.
+**Repository implication:**
 
-## 2. Bolivia water and sanitation sector sources
+This is a strong precedent for a resident-buildable 1 m2 control panel. The 1 m2 geometry also makes yield comparison simple in L/m2/night.
 
-### Water supply and sanitation in Bolivia
+## 2. Ground-coupled cooling and condensation
 
-Source: https://en.wikipedia.org/wiki/Water_supply_and_sanitation_in_Bolivia
+### Wei et al. (2020) — full-scale hot/humid earth-to-air heat exchanger field experiment
 
-Use:
+**Citation:** *Field experiments on the cooling capability of earth-to-air heat exchangers in hot and humid climate.* Applied Energy, 276, 115493. DOI: 10.1016/j.apenergy.2020.115493.
 
-- Background on sector institutions, Law 2066, EPSA providers, urban-rural gaps, and community water committees.
-- Useful starting point only; replace key claims with official and peer-reviewed sources where possible.
+**Key findings:**
 
-Repository use:
+- Full-scale testing used multiple buried PVC pipes with different diameters and depths.
+- Inlet air temperature varied from approximately 21.5 to 41.2 C.
+- Inlet moisture content varied from approximately 11.2 to 20.52 g/kg.
+- Maximum measured air-temperature reduction was approximately 22.13 C.
+- Maximum measured moisture-content reduction was approximately 7.41 g/kg.
+- Deeper burial and smaller diameter generally improved outlet temperature and moisture reduction.
+- Sensible cooling represented about 60.5-82.82% of total cooling capacity.
+- Latent cooling represented about 17.18-39.5% of total cooling capacity.
+- Maximum total cooling capacity in the tested configurations approached 2.99 kW.
+- Soil thermal recovery was slower than soil thermal response during operation.
 
-- Frame the mixed provider landscape: municipal utilities, cooperatives, community systems, and household self-supply.
-- Identify the legal and institutional trail for follow-up research.
+**Repository implication:**
 
-### Bolivia water resources management
+This is the strongest current field precedent for the ground-coupled condenser lane. Our prototype target of roughly 0.15-0.30 L/h requires much less moisture removal than the experiment's maximum 7.41 g/kg reduction, but our shallow, short, low-cost ground field will have much less thermal capacity. Soil recovery must therefore be measured explicitly.
 
-Source: https://en.wikipedia.org/wiki/Water_resources_management_in_Bolivia
+## 3. Condensation behavior on heat exchangers
 
-Use:
+### Humid-air condensation on plate/fin heat exchangers
 
-- Initial background on drought, flood, watershed, and climate risks.
-- Useful bridge between WASH and catchment/watershed planning.
+**Source:** *Characteristics of primary air condensation in indirect evaporative cooler: Theoretical analysis and visualized validation.* Building and Environment, 174, 106783 (2020).
 
-Repository use:
+**Key findings:**
 
-- Treat the corridor as a water-security and watershed-resilience problem, not only a household-service problem.
+- Dropwise and filmwise condensation can coexist on heat-exchanger surfaces.
+- Relative humidity materially changes condensation coverage and heat flux.
+- Condensate behavior affects air-side heat-transfer performance.
+- Published heat-exchanger work shows that surface geometry and wettability influence drainage and effective heat transfer.
 
-## 3. Cochabamba water governance and institutional history
+**Repository implication:**
 
-### Cochabamba Water War background
+The scrap automotive radiator should be evaluated not only by temperature but by drainage behavior. Water retained in fins can increase thermal resistance, re-evaporate, or remain trapped. The prototype should therefore measure condensate recovered at the tray versus psychrometrically predicted moisture removal.
 
-Source: https://en.wikipedia.org/wiki/Cochabamba_Water_War
+## 4. Fog collection
 
-Use:
+### Schemenauer and Cereceda standard fog collector
 
-- Introductory timeline and institutional framing of the 2000 Cochabamba water conflict.
-- Starting point for identifying names, laws, and policy debates.
+**Citation:** Schemenauer, R. S., & Cereceda, P. (1994). *A proposed standard fog collector for use in high-elevation regions.* Journal of Applied Meteorology, 33, 1313-1322.
 
-Repository use:
+**Key findings:**
 
-- Establish why community trust, affordability, rights, and governance legitimacy must be treated as core WASH dimensions.
+- Established a standardized 1 m2 fog-collector geometry for site comparison.
+- Uses a vertical polypropylene mesh collector oriented to fog-bearing wind.
+- The method is designed primarily for evaluating site potential before scaling.
 
-### William Finnegan, "Leasing the Rain"
+**Repository implication:**
 
-Source: https://www.newyorker.com/magazine/2002/04/08/leasing-the-rain
+Any fog lane should begin with a 1 m2 standard or near-standard collector rather than a large community mesh. This gives a defensible local L/m2/day baseline.
 
-Use:
+### Structural design review of fog collectors
 
-- Narrative account of the Cochabamba privatization conflict, price increases, social mobilization, and public reaction.
-- Useful for understanding why technical WASH interventions must be framed carefully.
+**Source:** *Structural design of efficient fog collectors: A review.*
 
-Repository use:
+**Key findings:**
 
-- Add a research standard that no corridor work should appear privatizing, extractive, or disconnected from local water-rights history.
+- Standard Fog Collectors use approximately 1 x 1 m collection area.
+- Large Fog Collectors are commonly around 4 m high by 10 m wide.
+- Raschel mesh remains widely used because it is inexpensive and field proven.
+- Double-layered mesh is common in many field systems.
+- Mesh geometry and wettability materially affect yield and drainage.
 
-## 4. Climate, drought, watershed, and migration context
+**Repository implication:**
 
-### Climate-linked water stress in Bolivia's Altiplano
+Fog collection is fundamentally an aerodynamic droplet-interception problem, not a condensation problem. It belongs in a separate prototype family with wind and liquid-water-content measurements.
 
-Source: The Guardian, 2026, Uru Chipaya climate-water reporting.
+## 5. Physics equations to carry into prototype work
 
-Use:
+### Condensation threshold
 
-- Contemporary example of drought, salinity, water stress, livelihood loss, and migration in Bolivia.
-- Not directly in the Cochabamba-Sucre corridor, but useful as a cautionary climate-water-migration case.
+```text
+T_surface < T_dewpoint
+```
 
-Repository use:
+### Moisture mass balance
 
-- Add climate-stress and migration-sensitive indicators to the field framework where appropriate.
-- Keep Altiplano examples distinct from the central valley corridor unless sources directly connect them.
+```text
+m_dot_water = m_dot_dry_air * (omega_in - omega_out)
+```
 
-### Urban morphology and water scarcity
+### Sensible load
 
-Source: Prieto-Curiel and Borja-Vega, "The Influence of Urban Morphology on Water Scarcity," 2024. https://arxiv.org/abs/2402.06676
+```text
+Q_sensible = m_dot_air * Cp_air * (T_in - T_out)
+```
 
-Use:
+### Latent load
 
-- Comparative method for studying how urban form, distance from city center, sparse development, tariffs, and infrastructure proximity can affect water access.
+```text
+Q_latent = m_dot_water * h_fg
+```
 
-Repository use:
+### Ground-loop heat rejection
 
-- Apply cautiously to Cochabamba peri-urban growth and Sucre municipal-rural transition.
-- Build GIS indicators for distance to city center, density, slope, road access, and infrastructure proximity.
+```text
+Q_ground = m_dot_coolant * Cp_water * (T_return - T_supply)
+```
 
-## 5. Sanitation, wastewater, and pollution pathways
+These equations allow every prototype to be checked against conservation of energy and mass rather than relying only on bucket volume.
 
-### Agriculture and runoff background
+## 6. Evidence gaps for the next pull
 
-Source: https://en.wikipedia.org/wiki/Agriculture_in_Bolivia
+- Field data on low-cost radiator-style air-to-water condensers using non-refrigerated cold sinks.
+- Stream/spring or seawater-coupled condensation experiments that can inform a closed-loop water-side heat sink.
+- Solar-chimney pressure and airflow studies applicable to approximately 8 in passive ductwork.
+- Soil thermal conductivity and thermal diffusivity ranges for Appalachian soils by moisture state.
+- Water-quality studies of dew/fog condensate and contamination introduced by collector materials.
+- Freezing and seasonal shutdown considerations for shallow ground loops in Appalachian climates.
 
-Use:
+## Evidence boundary
 
-- Initial framing for agricultural runoff, irrigation overlap, water pollution, and wastewater reuse.
-- Starting point for following World Bank and Ministry of Environment and Water materials.
-
-Repository use:
-
-- Treat Punata, Cliza, and the Valle Alto as agricultural-WASH interface zones.
-- Add runoff and irrigation overlap to water-quality screening.
-
-### Urbanization and insufficient sanitation coverage
-
-Source: Environmental issues in Bolivia overview. https://en.wikipedia.org/wiki/Environmental_issues_in_Bolivia
-
-Use:
-
-- Initial background on water pollution connected to low-density urban expansion, insufficient sanitation, lack of wastewater treatment, and unregulated septic systems.
-
-Repository use:
-
-- Add wastewater, septic, drainage, and peri-urban morphology indicators to the GIS model.
-
-## 6. Geospatial WASH and remote sensing methods
-
-### Mapping access to water and sanitation with public geospatial data
-
-Source: Dejito et al., "Mapping Access to Water and Sanitation in Colombia using Publicly Accessible Satellite Imagery, Crowd-sourced Geospatial Information and RandomForests." https://arxiv.org/abs/2111.04134
-
-Use:
-
-- Comparable public-data method for estimating WASH access from satellite imagery and crowd-sourced geospatial information.
-
-Repository use:
-
-- Use as a method precedent, not as a direct Bolivia result.
-- Emphasize transparency, uncertainty, and local validation.
-
-## 7. Research gaps to fill next
-
-- Official Bolivia Ministry of Environment and Water WASH documents.
-- National census or household survey sources for municipal-level water and sanitation indicators.
-- Departmental or municipal plans for Cochabamba, Chuquisaca, and Potosi.
-- Peer-reviewed studies on SEMAPA, Cochabamba peri-urban water systems, and community water committees.
-- Studies on Valle Alto irrigation, groundwater, sanitation, and agricultural runoff.
-- Sucre municipal water and wastewater planning documents.
-- Public datasets for schools, clinics, roads, rivers, watersheds, municipal boundaries, and settlement footprints.
+Yield values from other climates are comparison points only. They should not be transferred directly into McDowell or another deployment location without local measurements of dew point, soil/water temperature, airflow, collector temperature, and actual recovered volume.
