@@ -125,17 +125,56 @@ No project document should imply WHO or UNICEF approval of a prototype.
 
 ### 1. Passive rain collection
 
+The primary low-income architecture no longer assumes that the dwelling has an intact roof, affordable gutter replacement, or a structure suitable for modification.
+
 Reference architecture:
 
 ```text
-4 x 4 ft modular collectors
-→ controlled liner
-→ gutter/screen
-→ first flush
-→ isolated barrel bank
+AGED / SALVAGED PALLET OR WOOD FRAME
+        ↓
+REPLACEABLE WATERPROOF SKIN
+        ↓
+LOW-EDGE GUTTER OR LINER TROUGH
+        ↓
+SCREEN
+        ↓
+FIRST FLUSH
+        ↓
+EXISTING BARREL / CISTERN
+        ↓
+CONTROLLED OVERFLOW
 ```
 
-Four-panel arrays are being evaluated for rainfall yield, wind loading, rubble ballast, storage sizing, overflow, usability, and maintenance.
+The working design principle is:
+
+```text
+storage may exist
++
+wood may be abundant
++
+roof work may be unaffordable
+=
+manufacture new catchment area independently of the house
+```
+
+The reference pallet lane now uses measured pallet dimensions rather than assuming 4 x 4 ft. A common approximately 48 x 40 in pallet provides about 13.3 ft2 of surface area. At a shallow ~15 degree collector angle, horizontal projected area is about 12.9 ft2, corresponding to about 8.0 gallons theoretical per inch of rain and about 6.4 gallons per inch at an illustrative 80% recovery.
+
+Current pallet research gates include:
+
+- salvage acceptance / repairability;
+- structural stability;
+- liner durability;
+- hydraulic capacity;
+- first-flush performance;
+- actual collection efficiency;
+- wind and ballast behavior;
+- resident maintenance;
+- new-material cost and salvage fraction;
+- water-quality/use classification.
+
+The goal is not to make aged pallet wood itself potable-safe. The wood is treated primarily as abundant structure, while the water-contact surface remains controlled and replaceable.
+
+See [Pallet Rain Collector Prototype](docs/pallet-rain-collector-prototype.md).
 
 ### 2. Rubble-integrated support systems
 
@@ -328,14 +367,16 @@ VERIFICATION
 
 ## Immediate next passes
 
-1. Freeze first-flush hydraulic designs: FF-M1 manual and FF-F1 floating-ball.
-2. Build contamination-isolated barrel manifold details.
-3. Complete actual BOM / lifecycle cost model.
-4. Run durability-cycle protocol.
-5. Freeze a specific health-critical filter candidate from product-level evidence.
-6. Build integrated household bench architecture.
-7. Continue Gaza hourly climate / atmospheric-water analysis.
-8. Clean and normalize older case-study documentation and references.
+1. Freeze pallet P0 salvage acceptance sheet and repair classes.
+2. Freeze FF-M1 manual and FF-F1 floating-ball first-flush designs for pallet-scale catchments.
+3. Build a low-material liner-fold gutter variant and compare it with split-PVC guttering.
+4. Build contamination-isolated barrel manifold details.
+5. Complete actual BOM / lifecycle cost model for one-, two-, and four-pallet systems.
+6. Run durability-cycle protocol for aged wood, liner, fasteners, and gutter attachments.
+7. Freeze a specific health-critical filter candidate from product-level evidence.
+8. Build integrated household bench architecture.
+9. Continue Gaza hourly climate / atmospheric-water analysis.
+10. Clean and normalize older case-study documentation and references.
 
 ## Public-interest research boundary
 
