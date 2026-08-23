@@ -1,296 +1,346 @@
-# Alternative Water Collection Systems
+# Alternative Water Systems
 
-Public research and prototype-development repository for **low-cost alternative water collection methods** intended for resource-constrained, rural, underserved, and infrastructure-limited settings.
+Public research and prototype-development repository for **low-cost, passive, modular, and locally repairable alternative water systems** intended for resource-constrained, infrastructure-limited, humanitarian, disaster-recovery, and conflict-affected settings.
 
 **Maintainer:** Paul Skeffington, MS, MPH  
-**Repository status:** active prototype, physics, WASH-methodology, and field-validation research scaffold  
+**Repository status:** active research and prototype-validation program  
 **Last documentation review:** 2026-08-23
 
-## Purpose
+## Current objective
 
-This repository investigates whether water can be collected, recovered, stored, or supplemented using inexpensive systems built from common, reused, salvaged, or locally obtainable materials.
+The repository now centers on a family of alternative water architectures that can preserve or supplement water access when conventional service is unavailable, unreliable, damaged, delayed, or unaffordable.
 
-The active research focus is not a single geography or one type of WASH infrastructure. It is the development of **alternative water collection systems that can be built, tested, repaired, and evaluated with limited resources**.
+The active program combines:
 
-Candidate settings include:
+- rainwater capture;
+- passive atmospheric collection;
+- safe storage;
+- gravity-driven pretreatment and filtration;
+- controlled disinfection where required;
+- rubble and locally available structural materials;
+- field verification and sanitary inspection;
+- WHO/UNICEF-aligned small-supply risk management;
+- fail-visible operation and explicit use classification.
 
-- low-income rural communities;
-- isolated households and settlements;
-- communities with intermittent or unreliable water service;
-- humanitarian or disaster-recovery settings;
-- agricultural or non-potable water-support applications;
-- locations where conventional infrastructure is difficult, delayed, or cost-prohibitive.
+The objective is **not one universal purifier**. It is a modular family of systems that can be assembled, adapted, tested, repaired, and scaled while keeping the health-critical water-contact and treatment path controlled.
 
-McDowell County, West Virginia and earlier Bolivia WASH work provide field context and case-study material, but the methods are intended to be evaluated as transferable prototypes rather than location-specific prescriptions.
+## Design doctrine
+
+```text
+USE LOCAL MASS UPSTREAM
+        ↓
+CONTROL THE WATER-CONTACT PATH
+        ↓
+USE EVIDENCE-BACKED TREATMENT
+        ↓
+STORE SAFELY
+        ↓
+MONITOR
+        ↓
+CORRECT / RECLASSIFY
+```
+
+Passive systems are prioritized where physics and source-water quality allow because they reduce dependence on grid power, fuel, pumps, moving parts, and specialized maintenance.
+
+Powered systems remain necessary for functions such as desalination, deep pumping, some membrane processes, UV, and high-throughput distribution.
 
 ## Prototype and safety boundary
 
 **All systems in this repository are prototypes unless explicitly documented otherwise.**
 
-Repository designs, calculations, sketches, bill-of-materials concepts, and performance estimates are research outputs. They are not certified water systems, engineering plans, plumbing approvals, public-health determinations, or guarantees of safe drinking water.
+Designs, calculations, sketches, bills of materials, modeled yields, and performance estimates are research outputs. They are not certified engineering plans, potable-water approvals, public-health determinations, or guarantees of safe drinking water.
 
-Unless a system has been built with known food-contact materials, appropriately treated, independently tested, and validated against applicable water-quality requirements, collected water should be treated as:
+Unless a system uses known water-contact materials, appropriate treatment, independent testing, and validation against the intended-use requirements, collected water should be treated as:
 
 > **experimental and non-potable by default.**
 
-Particular caution applies to salvaged components. Automotive radiators, used tanks, roofing materials, recycled tubing, metal fittings, drums, and other scrap may contain residual coolant, oils, metals, lead-bearing solder, corrosion products, plasticizers, biological contamination, or unknown prior-use residues. A component that is thermally useful is not automatically safe for drinking-water contact.
+Clearer water is not automatically safer water. Modeled output is not measured output.
 
-No prototype should replace an established safe water source merely because it produces measurable water.
+## Core system architecture
 
-## Research question
+The current reference household architecture is:
 
-**How can basic thermodynamics, atmospheric moisture, precipitation, terrain, groundwater/soil temperature, solar energy, and locally available materials be combined into low-cost water-collection systems whose performance can be measured and reproduced?**
+```text
+RAIN / CHARACTERIZED SOURCE
+        ↓
+PALLET / TARP / CONTROLLED CATCHMENT
+        ↓
+SCREEN
+        ↓
+FIRST FLUSH
+        ↓
+RAW STORAGE
+        ↓
+SETTLING / ROUGHING
+        ↓
+HEALTH-CRITICAL FILTER
+        ↓
+DISINFECTION IF REQUIRED
+        ↓
+CLEAN STORAGE
+        ↓
+CONTROLLED OUTLET
+        ↓
+MONITOR / CORRECT / RECLASSIFY
+```
 
-The repository emphasizes experimentally testable questions:
+Supporting infrastructure may use screened rubble, pallets, scrap framing, locally available masonry, barrels of known prior use, and other low-resource structural materials. Rubble and unknown salvage should remain outside the controlled drinking-water contact path unless specifically characterized and isolated.
 
-- How much water can a system actually collect per hour, day, month, and season?
-- What environmental conditions control performance?
-- Which components are the true thermal or hydraulic bottlenecks?
-- Can recovered or inexpensive materials reduce construction cost without creating unacceptable contamination risk?
-- Can two or three residents construct and maintain a useful prototype with ordinary tools?
-- At what point is an alternative collector less useful than conventional rain capture, delivered water, repaired infrastructure, or another established option?
+## WHO / UNICEF alignment
 
-## Active methodology lanes
+The alternative-water program is being aligned with current WHO and UNICEF principles for emergency household treatment and small water supplies.
 
-### 1. Rainwater capture
+The project now uses a risk-management sequence:
 
-Rain remains the highest-volume passive atmospheric water source in many humid regions. Research includes roof and panel catchment, first-flush separation, storage, overflow management, debris exclusion, and comparison of liters captured per unit area and rainfall depth.
+```text
+WU-0 context
+WU-1 sanitary inspection
+WU-2 system design
+WU-3 operational monitoring
+WU-4 treatment evidence
+WU-5 safe storage
+WU-6 corrective action
+WU-7 verification
+WU-8 use classification
+WU-9 resilience / service transition
+```
 
-Rain collection provides an important baseline against which more experimental atmospheric systems should be judged.
+The repository adapts WHO Water Safety Plan logic to alternative systems through an **Alternative Water Safety Plan (A-WSP)** and uses WHO-style sanitary inspection for rainwater systems.
 
-### 2. Radiative dew collection
+UNICEF emergency HWTS criteria are used as an external design benchmark for:
 
-Thin, low-thermal-mass surfaces can cool through nighttime long-wave radiation. Condensation becomes possible when collector surface temperature falls below atmospheric dew point:
+- affordability;
+- intuitive operation;
+- fail-safe / fail-visible behavior;
+- durability;
+- low logistics footprint;
+- safe storage;
+- service life and throughput;
+- reduced recurring consumables;
+- bacteria, virus, and protozoa protection where drinking-water claims are intended.
+
+No project document should imply WHO or UNICEF approval of a prototype.
+
+## Current engineering priorities
+
+### 1. Passive rain collection
+
+Reference architecture:
+
+```text
+4 x 4 ft modular collectors
+→ controlled liner
+→ gutter/screen
+→ first flush
+→ isolated barrel bank
+```
+
+Four-panel arrays are being evaluated for rainfall yield, wind loading, rubble ballast, storage sizing, overflow, usability, and maintenance.
+
+### 2. Rubble-integrated support systems
+
+Screened debris can serve as:
+
+- ballast;
+- foundations;
+- barrel stands;
+- erosion-control aprons;
+- drainage sub-base;
+- retaining structure;
+- thermal/shading mass.
+
+Core rule:
+
+```text
+RUBBLE / SCRAP STRUCTURE
+        ↓
+CONTROLLED LINER / BARRIER
+        ↓
+CONTROLLED WATER PATH
+```
+
+Unscreened demolition debris is not assumed safe as potable-path filter media or storage material.
+
+### 3. Barrel-bank storage
+
+The current reference bank uses 1-4 approximately 200-L drums on a broad screened-rubble pad with a continuous load spreader, independent valves, raw/clean separation, and controlled overflow.
+
+A full four-drum bank approaches 0.9 tonnes, so low, broad support and settlement control are prioritized over elevated towers.
+
+### 4. Health-critical filtration
+
+Current preferred architecture:
+
+```text
+PASSIVE PRETREATMENT
++
+STANDARDIZED GRAVITY UF / MEMBRANE ELEMENT
++
+SAFE STORAGE
+```
+
+Parallel fallback/research lanes include controlled ceramic, biosand, and gravity-driven membrane systems.
+
+Technology class alone is not accepted as evidence of pathogen protection. Exact product or system performance must be documented.
+
+### 5. Fail-visible operation
+
+Every treated-water outlet should have an explicit state:
+
+```text
+GREEN  = validated for stated use
+AMBER  = restricted / treatment required
+RED    = do not use
+GRAY   = status unknown
+```
+
+Unknown does not default to safe. Critical failures should produce visible downgrade and, where practical, physical outlet lockout.
+
+### 6. Usability
+
+The integrated prototype is being designed so an unfamiliar responder can operate it after brief instruction using pictorial SOPs.
+
+Current internal usability target:
+
+```text
+>= 18/20 task score
+AND
+zero critical errors
+```
+
+## Passive atmospheric collection lanes
+
+Atmospheric collection remains an active secondary research area.
+
+### Radiative dew
 
 ```text
 T_surface < T_dewpoint
 ```
 
-Prototype work examines surface material, emissivity, insulation, sky exposure, panel angle, drainage, wind, cloud cover, and liters collected per square meter.
+Research focuses on surface temperature, emissivity, sky exposure, humidity, wind, fouling, and yield per area.
 
-### 3. Ground-coupled atmospheric condensation
+### Ground-coupled condensation
 
-Humid air can be cooled against a ground-derived thermal sink. The current prototype architecture uses:
+The earlier P2 ground-condenser architecture remains an experimental lane using a buried/shaded intake, closed-loop ground heat sink, radiator heat exchanger, and passive/solar-assisted exhaust.
 
-```text
-buried/shaded air intake
-        -> 55-gallon HDPE drum
-        -> salvaged automotive radiator heat exchanger
-        -> condensate tray
-        -> collection vessel
-        -> passive or solar-assisted exhaust chimney
-```
+It remains **non-potable experimental hardware** unless the water-contact path is independently validated.
 
-A separate closed-loop buried PEX field transfers heat from the radiator into cooler soil. The radiator functions as an experimental condenser rather than a potable-water-certified component.
+### Fog / high-humidity interception
 
-Current P2 design basis:
+Fog and mesh-based collection remain site-dependent research lanes requiring local meteorological evidence.
 
-- one 55-gallon HDPE drum;
-- approximately 20 x 18 in automotive radiator core;
-- 8 in smooth-wall buried/shaded air intake;
-- approximately 25-40 ft intake pre-cooler;
-- approximately 3 x 50 ft parallel 3/4 in PEX ground loops;
-- 4-6 ft target hydronic burial depth where site conditions allow;
-- 45-60 CFM design airflow;
-- approximately 2-4 L/min closed-loop coolant flow;
-- radiator target approximately 55-58 F under favorable summer conditions;
-- experimental summer collection target approximately 1-2.5 L/day, with higher short-duration output possible under favorable dew-point conditions.
+## Contested operational zones
 
-These values are design hypotheses until verified by field measurements.
+A dedicated research sector addresses WASH continuity where conflict, infrastructure damage, displacement, access restrictions, or supply-chain failure disrupt normal water systems.
 
-### 4. Stream- or spring-coupled condensation
+The sector is **actor-neutral and civilian-outcome focused**. It is intended for legitimate responders preserving civilian water and sanitation access under applicable law and humanitarian principles.
 
-Where a naturally cold stream or spring is available and lawful access is established, moving water may serve as a heat sink for a **closed-loop** condenser.
+It does not provide guidance for:
 
-Stream water and collected condensate should remain physically separated. The research question is whether the local water body can remove enough heat to keep a condensation surface below atmospheric dew point without contaminating the collected water.
+- denying water access;
+- poisoning or contaminating water;
+- targeting water infrastructure;
+- disguising military capability as humanitarian infrastructure;
+- unrelated tactical movement, evasion, or force-protection operations.
 
-### 5. Solar-assisted passive airflow
+The primary current case study is Gaza, with regional transfer checks planned for other conflict- and disaster-affected environments.
 
-Solar heat is most useful on the **exhaust side**, where it can strengthen stack effect and increase airflow across a cold condenser.
+See:
 
-Heating humid inlet air alone does not raise its dew point unless additional moisture is added; it usually increases sensible cooling demand. Current designs therefore investigate dark solar chimneys and passive reflectors after the condenser instead of heating the incoming air before cooling it.
+- [Contested Operational Zones](docs/contested-operational-zones/README.md)
+- [Phased Execution Roadmap](docs/contested-operational-zones/phased-execution-roadmap.md)
+- [WHO / UNICEF Alternative Water Systems Alignment](docs/contested-operational-zones/who-unicef-alternative-water-systems-alignment.md)
+- [Alternative Water Safety Plan Template](docs/contested-operational-zones/alternative-water-safety-plan-template.md)
 
-### 6. Fog and high-humidity interception
+## Current validation stack
 
-Mesh, screen, fibrous surfaces, and terrain-assisted fog interception remain a separate collection lane. These systems should be evaluated by local fog frequency, wind, droplet size, collection geometry, fouling, and water-quality characteristics.
+The repository now separates engineering maturity from water-use claims.
 
-## Physics foundation
-
-### Dew point
-
-Condensation requires:
+### Engineering
 
 ```text
-T_condenser < T_dewpoint
+G0 literature / mechanism
+G1 environmental feasibility
+G2 bench prototype
+G3 mass / energy / hydraulic balance
+G4 resident-buildable prototype
+G5 water-quality gate
+G6 comparative utility
 ```
 
-Relative humidity alone is insufficient for design. Heating moist air lowers relative humidity but, absent moisture addition or removal, leaves dew point approximately unchanged.
-
-### Moisture balance
-
-The theoretical condensate rate is determined from the change in humidity ratio:
+### Water-use classification
 
 ```text
-m_dot_water = m_dot_dry_air * (omega_in - omega_out)
+REJECT
+NON-POTABLE / BOUNDED USE
+TREATMENT REQUIRED
+TREATMENT RESEARCH ONLY
+VALIDATED FOR INTENDED USE
 ```
 
-where `omega` is kilograms of water vapor per kilogram of dry air.
-
-### Thermal balance
-
-The cold sink must absorb both sensible heat from cooling the air and latent heat released during condensation:
+### WHO/UNICEF-aligned management
 
 ```text
-Q_total = Q_sensible + Q_latent + environmental gains
+SANITARY INSPECTION
++
+A-WSP
++
+OPERATIONAL MONITORING
++
+CORRECTIVE ACTION
++
+VERIFICATION
 ```
 
-with:
+## Current documentation
 
-```text
-Q_sensible = m_dot_air * Cp_air * DeltaT
-Q_latent   = m_dot_water * h_fg
-```
-
-Near ordinary environmental temperatures, condensing one kilogram of water releases roughly 2.4 MJ of latent heat. Therefore meaningful atmospheric water production requires meaningful heat rejection; a collector is fundamentally a heat exchanger.
-
-### Ground-loop balance
-
-For a closed water-based coolant loop:
-
-```text
-Q_ground = m_dot_coolant * Cp_water * (T_return - T_supply)
-```
-
-This quantity should be measured rather than assumed.
-
-## Prototype development gates
-
-Every prototype should advance through explicit gates.
-
-### G0 - literature and mechanism
-
-Document the physical mechanism, comparable systems, known limits, and plausible failure modes.
-
-### G1 - environmental feasibility
-
-Measure the local variables that govern the mechanism. Depending on system type, these may include air temperature, relative humidity, dew point, soil temperature, stream temperature, rainfall, cloud cover, wind, or fog frequency.
-
-### G2 - bench prototype
-
-Demonstrate the mechanism with the smallest practical system. Do not scale on theoretical yield alone.
-
-### G3 - thermal and mass balance
-
-Measure input and output temperatures, humidity, airflow, coolant flow where applicable, and actual collected water. Compare predicted condensate with recovered condensate.
-
-### G4 - resident-buildable prototype
-
-Determine whether two or three people using common tools and locally obtainable materials can build, operate, clean, and repair the system.
-
-### G5 - water-quality gate
-
-Characterize material-contact risks and test collected water before proposing any use beyond clearly bounded experimental or non-potable applications.
-
-### G6 - comparative utility
-
-Compare cost, labor, liters produced, reliability, maintenance, seasonal availability, and water-quality burden against established alternatives such as rain capture, repaired service, wells, hauled water, or other approved sources.
-
-## Scrap and locally available materials
-
-The project intentionally evaluates materials that may already exist in resource-constrained settings, including:
-
-- food-grade HDPE drums;
-- smooth PVC or HDPE pipe;
-- PEX tubing;
-- salvaged lumber and structural framing;
-- gutters and drainage fittings;
-- screens and filters;
-- used automotive heat exchangers for **non-potable experimental prototypes only**;
-- recovered sheet metal or roofing where material history is known;
-- common insulation;
-- gravity-fed plumbing components;
-- low-power pumps or fans where passive operation is insufficient.
-
-The objective is not to use scrap indiscriminately. The objective is to distinguish between components that can be safely reused structurally or thermally and components whose prior use makes them unsuitable for water contact.
-
-## Measurement standards
-
-Prototype reports should record, as applicable:
-
-- date and site class;
-- ambient air temperature;
-- relative humidity;
-- calculated dew point;
-- condenser surface temperature;
-- inlet and outlet air temperature/RH;
-- airflow;
-- coolant supply and return temperature;
-- coolant flow;
-- soil or water-sink temperature;
-- rainfall/fog/cloud conditions;
-- runtime;
-- collected volume;
-- collection rate in L/h;
-- normalized yield where applicable in L/m2/day;
-- known material-contact risks;
-- maintenance or fouling observations.
-
-Do not report modeled output as measured output.
-
-## Current development priority
-
-The current engineering prototype is a **ground-coupled atmospheric condenser** designed around components that are widely obtainable:
-
-1. shaded or buried smooth-wall air intake for sensible pre-cooling;
-2. 55-gallon blue HDPE drum as an enclosure/plenum;
-3. cleaned scrap automotive radiator as the experimental condenser;
-4. sloped condensate pan and isolated collection vessel;
-5. closed-loop PEX ground heat exchanger;
-6. passive stack or solar-assisted exhaust draft;
-7. temperature, humidity, coolant-flow, airflow, and water-volume instrumentation.
-
-The development objective is to verify whether the apparatus can hold the radiator several degrees below dew point while processing enough humid air to produce useful water without exhausting the ground thermal sink.
-
-## Geographic case studies
-
-Earlier repository work on Bolivia, including the Cochabamba-Sucre corridor, remains useful as WASH context and as a source of questions about service reliability, drought, spatial inequity, and community water systems. Those materials should now be interpreted as **case-study and legacy research lanes**, not as the primary repository identity.
-
-McDowell County, West Virginia is being used as a current humid Appalachian reference environment for alternative collection calculations and prototype planning. Site-specific claims remain provisional until measured locally.
-
-## Public-interest research boundary
-
-This repository supports public-health research, environmental-health research, physics and engineering prototyping, open methods, and reproducible documentation.
-
-It does not provide:
-
-- certified engineering designs;
-- guaranteed water production;
-- potable-water certification;
-- regulatory approval;
-- household-specific safety determinations;
-- instructions to bypass public-health advisories;
-- authority to divert streams, excavate property, modify utilities, or construct regulated water systems;
-- a substitute for reliable municipal, utility, well, or other approved drinking-water service.
-
-Field deployments must consider property permission, excavation hazards, buried utilities, stream and environmental rules, electrical safety, structural stability, freezing, sanitation, local codes, and applicable public-health requirements.
-
-## Repository documentation
-
-Active methodology documents should center on alternative collection mechanisms, prototype design, measurement, and validation. Existing Bolivia and corridor documents are retained as historical/case-study research unless explicitly superseded.
-
-Current core files include:
+### Core methodology
 
 - [Alternative Water Collection Methodology](docs/alternative-water-collection-methodology.md)
 - [Field Assessment Framework](docs/field-assessment-framework.md)
 - [Literature Review](docs/literature-review.md)
 - [Annotated Bibliography](docs/bibliography.md)
-- [Public Data Inventory](docs/data-inventory.md)
-- [GIS Build Plan](docs/gis-build-plan.md)
+- [Pallet Rain Collector Prototype](docs/pallet-rain-collector-prototype.md)
+- [Barrel-Scale Filtration Roadmap](docs/barrel-scale-filtration-roadmap.md)
+- [Field Validation and Filter QA](docs/field-validation-and-filter-qa.md)
+- [Microbial Field Testing and Rainwater Chemical Risk](docs/microbial-field-testing-and-rainwater-chemical-risk.md)
 
-## Supported contribution
+### Contested-zone / alternative-system program
 
-A reproducible, physics-based research framework for evaluating inexpensive and locally buildable water-collection prototypes, with explicit attention to measured performance, material safety, field maintainability, environmental suitability, and uncertainty.
+- [Sector Overview](docs/contested-operational-zones/README.md)
+- [Phased Execution Roadmap](docs/contested-operational-zones/phased-execution-roadmap.md)
+- [Gaza WASH Literature Review](docs/contested-operational-zones/gaza-regional-wash-literature-review.md)
+- [Gaza Rainfall and Humidity](docs/contested-operational-zones/gaza-rainfall-humidity-quantification.md)
+- [Gaza Yield and Storage Sizing](docs/contested-operational-zones/gaza-monthly-yield-and-storage-sizing.md)
+- [Rubble as WASH Construction Material](docs/contested-operational-zones/rubble-as-wash-construction-material.md)
+- [Rubble-Integrated WASH Prototype](docs/contested-operational-zones/rubble-integrated-wash-prototype.md)
+- [Four-Pallet Wind / Ballast Sizing](docs/contested-operational-zones/four-pallet-wind-ballast-sizing.md)
+- [Barrel-Bank Load / Stability](docs/contested-operational-zones/barrel-bank-load-stability.md)
+- [Passive WASH Resilience Literature Note](docs/contested-operational-zones/passive-wash-resilience-literature-note.md)
+- [WHO / UNICEF Alignment](docs/contested-operational-zones/who-unicef-alternative-water-systems-alignment.md)
+- [WHO-Style Sanitary Inspection](docs/contested-operational-zones/who-style-sanitary-inspection-pallet-rubble-rain-collector.md)
+- [Alternative Water Safety Plan](docs/contested-operational-zones/alternative-water-safety-plan-template.md)
+- [UNICEF HWTS Prototype Scorecard](docs/contested-operational-zones/unicef-hwts-prototype-scorecard.md)
+- [Health-Critical Filter Selection Matrix](docs/contested-operational-zones/health-critical-filter-selection-matrix.md)
+- [Fail-Safe and Fail-Visible Design](docs/contested-operational-zones/fail-safe-and-fail-visible-design.md)
+- [Pictorial SOP and Usability-Test Protocol](docs/contested-operational-zones/pictorial-sop-and-usability-test-protocol.md)
 
-## Unsupported contribution
+## Immediate next passes
 
-No repository prototype should be represented as a proven drinking-water system, certified engineering solution, emergency-water guarantee, regulatory finding, or substitute for independently validated safe-water infrastructure.
+1. Freeze first-flush hydraulic designs: FF-M1 manual and FF-F1 floating-ball.
+2. Build contamination-isolated barrel manifold details.
+3. Complete actual BOM / lifecycle cost model.
+4. Run durability-cycle protocol.
+5. Freeze a specific health-critical filter candidate from product-level evidence.
+6. Build integrated household bench architecture.
+7. Continue Gaza hourly climate / atmospheric-water analysis.
+8. Clean and normalize older case-study documentation and references.
+
+## Public-interest research boundary
+
+This repository supports public-health research, environmental-health research, WASH engineering, physics, open methods, and reproducible prototype development.
+
+Field deployments must consider property permission, structural stability, flood/drainage hazards, excavation and utilities, environmental rules, sanitation, treatment requirements, local codes, and public-health oversight.
+
+No prototype should replace an established safer source merely because it produces measurable water.
