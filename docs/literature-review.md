@@ -1,173 +1,459 @@
-# Literature Review: Cochabamba-Sucre WASH Corridor
+# Literature Review: Physics of Alternative Water Collection Systems
 
 ## Scope
 
-This review frames a public, civic-facing Water, Sanitation, and Hygiene (WASH) research agenda for the central Bolivian corridor from Cochabamba through the inter-Andean valley and mountain corridor toward Sucre, with secondary attention to Potosi-linked highland water-quality and water-scarcity concerns.
+This review establishes the physics and evidence base for low-cost alternative water collection systems that can be prototyped from common, reused, salvaged, or locally obtainable materials.
 
-The review is organized around six working questions:
+The active research question is:
 
-1. Where are water-access and service-reliability gaps most likely to occur?
-2. Where are sanitation and wastewater gaps most likely to affect public health?
-3. Which communities, schools, clinics, and peri-urban settlements are likely to face the highest dry-season and drought stress?
-4. How do community water systems, cooperatives, municipal providers, and customary water practices shape access?
-5. Which public datasets can support non-sensitive GIS mapping of WASH inequity?
-6. What field instruments are needed before engaging municipal, NGO, parish, academic, or public-health partners?
+> How can atmospheric moisture, precipitation, cold ground or surface-water thermal sinks, solar energy, and simple structures be combined into low-cost water-collection prototypes whose performance can be measured reproducibly?
 
-## Core literature and evidence areas
+All systems discussed here remain **experimental prototypes** unless separately validated. Designs made from salvaged components should be treated as non-potable by default until material provenance, treatment, and water quality have been independently evaluated.
 
-### 1. National WASH monitoring baseline
+## 1. Governing physics
 
-The WHO/UNICEF Joint Monitoring Programme (JMP) is the primary global reference for tracking SDG 6 progress in drinking water, sanitation, hygiene, WASH in schools, WASH in health-care facilities, inequalities, and climate-resilient WASH. The repository should use JMP categories as the baseline vocabulary for service ladders and indicator definitions.
+### 1.1 Dew point and condensation
 
-Primary source: https://washdata.org/data/household
+Condensation begins when a surface temperature falls below the dew point of the surrounding air:
 
-Review actions:
+```text
+T_surface < T_dewpoint
+```
 
-- Download Bolivia household WASH estimates from JMP.
-- Separate urban/rural access indicators.
-- Track drinking water, sanitation, hygiene, inequalities, schools, and health-care facility WASH as separate evidence streams.
-- Use JMP terms consistently: basic, limited, unimproved, surface water, safely managed, and sanitation service ladder categories where available.
+Relative humidity alone is not sufficient for design. Dew point is the more useful engineering variable because it reflects the actual vapor partial pressure of the air.
 
-### 2. Bolivia sector structure and service-provision model
+Heating moist air without adding or removing water vapor changes relative humidity but leaves dew point approximately unchanged. For that reason, heating incoming air before a condenser usually increases sensible cooling load without increasing the mass of condensable water.
 
-Bolivia's WASH sector is institutionally mixed. Urban services are generally linked to municipal governments or decentralized operators, while rural and dispersed systems often depend on water committees, community systems, cooperatives, or household self-supply. Literature on Bolivia emphasizes improved access since 1990, while also noting persistent service-quality and coverage gaps, especially between urban and rural populations.
+### 1.2 Humidity ratio and condensate mass balance
 
-Key issues for the corridor:
+The maximum water that can be removed from an air stream depends on the change in humidity ratio:
 
-- Municipal service expansion in Cochabamba and Sucre.
-- Peri-urban settlement growth around Cochabamba.
-- Community-managed rural water systems in inter-valley settlements.
-- Small-provider governance, tariff legitimacy, maintenance capacity, and water-quality monitoring.
-- Continuity of service, not only nominal access.
+```text
+m_dot_water = m_dot_dry_air * (omega_in - omega_out)
+```
 
-Initial background source: https://en.wikipedia.org/wiki/Water_supply_and_sanitation_in_Bolivia
+where `omega` is kilograms of water vapor per kilogram of dry air.
 
-### 3. Cochabamba water governance and social legitimacy
+This relationship should be used to compare theoretical moisture removal with measured collection.
 
-Cochabamba requires special treatment in the literature review because water access is not only a technical problem; it is also a governance, affordability, trust, and rights issue. The 2000 water conflict remains central to understanding local sensitivity around tariffs, privatization, community wells, customary systems, and public participation.
+### 1.3 Sensible and latent heat
 
-The review should treat this history as required context before any field engagement. It should avoid any project framing that appears extractive, privatizing, or disconnected from local water-rights experience.
+A condenser must remove both sensible heat from the air and latent heat released during phase change:
 
-Initial background sources:
+```text
+Q_total = Q_sensible + Q_latent + environmental gains
+```
 
-- https://en.wikipedia.org/wiki/Cochabamba_Water_War
-- https://www.newyorker.com/magazine/2002/04/08/leasing-the-rain
+with:
 
-Review actions:
+```text
+Q_sensible = m_dot_air * Cp_air * DeltaT
+Q_latent   = m_dot_water * h_fg
+```
 
-- Identify peer-reviewed work on the Cochabamba Water War, SEMAPA, community water systems, and customary water rights.
-- Separate historical governance lessons from current field conditions.
-- Build an engagement protocol that centers consultation, consent, local institutional knowledge, and public-interest outcomes.
+Near ordinary environmental temperatures, condensing 1 kg of water releases roughly 2.4 MJ of latent heat. Atmospheric water harvesting by cooling is therefore fundamentally a **heat-rejection problem**.
 
-### 4. Water scarcity, drought, watershed resilience, and climate stress
+### 1.4 Radiative cooling
 
-The corridor should be reviewed as a water-security system. The Andean valley setting creates seasonal and spatial variability in water access. Drought, catchment degradation, aquifer stress, changing precipitation, irrigation demand, and urban expansion can all affect household WASH reliability.
+Passive radiative collectors cool by emitting long-wave infrared radiation to the sky. A simplified radiative relationship follows Stefan-Boltzmann behavior:
 
-Key field questions:
+```text
+P = epsilon * sigma * T^4
+```
 
-- Which settlements rely on springs, wells, surface water, water trucking, or community tanks?
-- Which systems fail during dry-season stress?
-- Which communities face both water scarcity and sanitation exposure?
-- Which catchments, roads, and elevation zones correlate with service gaps?
-- How should WASH planning incorporate watershed protection and drought preparedness?
+Useful condensation occurs when net long-wave heat loss is sufficient to pull the collector below dew point despite convection and environmental heat gains.
 
-Initial background source: https://en.wikipedia.org/wiki/Water_resources_management_in_Bolivia
+Clouds reduce the effective radiative sink because they emit long-wave radiation back toward the collector. Wind can supply moisture but also increase convective heating. The literature therefore consistently identifies clear skies, high humidity, low-to-moderate wind, low thermal mass, high infrared emissivity, and good insulation as favorable conditions.
 
-### 5. Wastewater, sanitation, and pollution pathways
+## 2. Passive radiative dew collectors
 
-Sanitation review should include sewerage, on-site sanitation, fecal sludge, greywater drainage, wastewater treatment, and contamination pathways from domestic, agricultural, industrial, and mining sources. Literature on Bolivia points to wastewater treatment, reuse, water quality, and climate-resilient supply as major sector priorities.
+Radiative dew collection is the simplest atmospheric condensation pathway because it requires no refrigeration cycle or external electrical energy.
 
-Priority concerns for this corridor:
+A major review by Khalil et al. describes radiative collectors as high-emissivity surfaces designed to cool below dew point at night. Reported maximum practical yields in favorable arid and semi-arid conditions commonly fall around **0.3-0.6 L/m2/day**, while an upper radiative-energy limit around **0.8 L/m2/day** is cited in the literature.
 
-- Peri-urban wastewater discharge around Cochabamba.
-- Rural latrine and septic performance.
-- Drainage and greywater conditions in dense settlements.
-- Agricultural runoff in valley zones such as Punata and Cliza.
-- Potosi-linked mining legacy and metal-contamination screening where relevant.
+### Established design principles
 
-Initial background source: https://en.wikipedia.org/wiki/Agriculture_in_Bolivia
+Evidence supports the following features:
 
-### 6. WASH in schools, clinics, and public facilities
+- low thermal mass;
+- high long-wave infrared emissivity;
+- low solar absorption during the day;
+- insulation from warm ground or structural mass;
+- good sky exposure;
+- roughly 30 degree inclination for planar collectors as a useful compromise between radiation, wind, and drainage;
+- hydrophilic or otherwise drainage-efficient surfaces;
+- rapid removal of condensed water before reheating and evaporation.
 
-The field plan should not stop at household access. Schools, clinics, markets, parishes, community centers, and transit points are important WASH nodes. JMP maintains specific domains for WASH in schools and health-care facilities, which should inform field instruments.
+Simple polyethylene and agricultural films have performed competitively in experimental work, which is relevant to low-cost fabrication.
 
-Review actions:
+### Limitations
 
-- Build school-WASH checklist: water availability, drinking water safety, handwashing stations, soap, menstrual health facilities, toilet separation, disability access, cleaning and maintenance.
-- Build health-facility-WASH checklist: water continuity, sanitation, hand hygiene, waste handling, cleaning protocols, and risk to patients and staff.
-- Identify public school, clinic, and facility datasets for mapping.
+Radiative collectors have inherently low specific yield and strong weather dependence. Scaling area does not always scale output linearly because larger structures may suffer increased convection and thermal coupling.
 
-Primary source: https://washdata.org/data/household
+### Prototype implication
 
-### 7. GIS and spatial equity methods
+Radiative panels are best treated as:
 
-The corridor is suitable for a GIS-first WASH gap map because elevation, road access, settlement pattern, hydrology, and municipal boundaries are central to access. The repository should develop a non-sensitive spatial model, avoiding household-level exposure or personally identifiable information.
+1. a zero-energy baseline collector;
+2. a control against which ground- or stream-cooled systems can be compared;
+3. a supplemental source rather than a guaranteed water supply.
 
-Potential public layers:
+## 3. Ground-coupled atmospheric condensation
 
-- Municipal and departmental boundaries.
-- Roads and travel-time surfaces.
-- Rivers, streams, watersheds, and reservoirs.
-- Elevation and slope.
-- Settlement footprints and population grids.
-- Schools, clinics, markets, and community facilities.
-- Existing utility service areas where public.
-- Drought, precipitation, land-cover, and agricultural-use layers.
+Earth-air heat exchangers provide direct evidence that cool soil can remove both sensible heat and moisture from humid air.
 
-Method note:
+Full-scale hot/humid experiments have shown that earth-to-air heat exchangers can reduce both air temperature and moisture content. Reported performance improves with greater burial depth, longer pipe length, and lower pipe diameter under otherwise comparable conditions. The same research also shows that the soil immediately surrounding the exchanger warms during operation and recovers more slowly afterward.
 
-A comparable technical direction is the use of remote sensing, public geospatial data, and machine-learning estimates for WASH access mapping. These methods should be adapted conservatively for public-interest planning, with transparency and local validation.
+### Governing mechanism
 
-Example method source: https://arxiv.org/abs/2111.04134
+The useful condition remains:
 
-## Corridor zones for review
+```text
+T_exchanger < T_dewpoint
+```
 
-### Zone A: Cochabamba metropolitan and peri-urban edge
+Heat moves through:
 
-Focus: municipal service reliability, informal/peri-urban access, water affordability, community systems, wastewater discharge, aquifer stress, drainage, and hygiene access.
+```text
+humid air -> exchanger wall -> coolant or buried pipe -> soil
+```
 
-Potential field sites: Sacaba, Tiquipaya, southern/peri-urban settlements, and urban-rural transition zones.
+If the wall remains below dew point, condensate forms and releases latent heat that must also be transported into the ground.
 
-### Zone B: Valle Alto agricultural towns
+### Ground-loop heat balance
 
-Focus: irrigation-water overlap, household water quality, agricultural runoff, sanitation coverage, rural schools and clinics, and seasonal reliability.
+For a closed-loop water circuit:
 
-Potential field sites: Punata, Cliza, Tolata, Tarata, Arani, and nearby agricultural communities.
+```text
+Q_ground = m_dot_coolant * Cp_water * (T_return - T_supply)
+```
 
-### Zone C: Inter-valley mountain corridor
+This makes ground-side thermal performance directly measurable with inexpensive temperature probes and a flow meter.
 
-Focus: dispersed settlements, road access, springs, gravity-fed systems, small tanks, drought exposure, sanitation isolation, and service-maintenance capacity.
+### Soil moisture and thermal recovery
 
-Potential field sites: small villages between Cochabamba and Chuquisaca/Sucre road corridors.
+Moist soil generally provides better heat transfer than dry porous soil because water increases effective thermal conductivity and reduces insulating air voids.
 
-### Zone D: Sucre municipal-rural transition
+The ground cannot be treated as an infinite refrigerator. Continuous extraction warms the local soil volume. Prototype testing therefore needs to characterize:
 
-Focus: urban service extension, peri-urban growth, school and clinic WASH, sanitation coverage, wastewater, and rural water systems beyond the historic core.
+- initial soil temperature;
+- soil temperature near the loop during operation;
+- background soil temperature away from the loop;
+- recovery time after shutdown;
+- performance under continuous versus intermittent operation.
 
-Potential field sites: Sucre outskirts, Yotala, and nearby Chuquisaca communities.
+### Current low-cost prototype architecture
 
-### Zone E: Potosi-linked highland edge
+The active repo design uses:
 
-Focus: water scarcity, mining legacy, metal-contamination screening, sparse service networks, and highland settlement reliability.
+```text
+buried/shaded 8 in air intake
+        -> 55-gallon HDPE drum
+        -> salvaged automotive radiator condenser
+        -> condensate tray
+        -> collection vessel
+        -> passive/solar-assisted exhaust
+```
 
-Potential field sites: only where project partners can verify safe access, community consent, and public-interest purpose.
+A separate closed-loop PEX field removes heat from the automotive radiator.
 
-## Working bibliography seed list
+Current design basis:
 
-1. WHO/UNICEF Joint Monitoring Programme. Household WASH data and SDG 6 monitoring. https://washdata.org/data/household
-2. UNICEF Bolivia. Country office, reports, and child-priority framework. https://www.unicef.org/bolivia/en
-3. Bolivia water supply and sanitation sector overview. https://en.wikipedia.org/wiki/Water_supply_and_sanitation_in_Bolivia
-4. Cochabamba Water War background. https://en.wikipedia.org/wiki/Cochabamba_Water_War
-5. Finnegan, William. "Leasing the Rain." The New Yorker, 2002. https://www.newyorker.com/magazine/2002/04/08/leasing-the-rain
-6. Bolivia water resources management overview. https://en.wikipedia.org/wiki/Water_resources_management_in_Bolivia
-7. Bolivia agriculture and runoff background. https://en.wikipedia.org/wiki/Agriculture_in_Bolivia
-8. Dejito et al. "Mapping Access to Water and Sanitation in Colombia using Publicly Accessible Satellite Imagery, Crowd-sourced Geospatial Information and RandomForests." https://arxiv.org/abs/2111.04134
+- approximately 3 x 50 ft parallel PEX ground loops;
+- approximately 4-6 ft burial where practical;
+- 45-60 CFM nominal airflow;
+- approximately 2-4 L/min coolant flow;
+- design radiator temperature approximately 55-58 F under favorable summer conditions;
+- experimental summer target approximately 1-2.5 L/day for one deployment.
 
-## Research standards
+These are hypotheses to be verified experimentally, not guaranteed production values.
 
-- Keep the repository public, civic-facing, and non-operational.
-- Do not publish household-level coordinates, personally identifiable information, or sensitive community-level vulnerability data without partner approval.
-- Distinguish evidence from hypothesis.
-- Prefer official, peer-reviewed, municipal, NGO, and community-validated sources.
-- Use Spanish-language sources where available.
-- Treat local water governance as a social institution, not only an engineering problem.
+## 4. Stream- and spring-coupled condensation
+
+Cold moving water can serve as a heat sink in the same way that soil does, but potentially with greater heat-transfer capacity because flowing water continually replaces warmed fluid around the exchanger.
+
+The atmospheric and stream-water circuits should remain physically separated.
+
+Conceptually:
+
+```text
+humid air
+   -> cold radiator/plate
+   -> condensate
+
+closed coolant circuit
+   -> stream-side heat exchanger
+   -> return to condenser
+```
+
+### Governing energy relationship
+
+For the coolant or water-side heat sink:
+
+```text
+Q = m_dot * Cp * DeltaT
+```
+
+A viable stream-coupled system requires the effective condenser temperature to remain below ambient dew point for a useful duration.
+
+### Research gaps
+
+Compared with passive radiative dew collection and conventional earth-air exchangers, there is less standardized literature on small scrap-built stream-coupled atmospheric condensers. This should therefore remain a clearly marked **prototype hypothesis** until local water temperature, flow, exchanger performance, ecological constraints, and legal access are established.
+
+## 5. Buried-air pre-cooling
+
+A buried smooth-wall air intake can reduce the sensible cooling burden on the primary condenser.
+
+If warm humid air is cooled above its dew point, its humidity ratio remains approximately unchanged while its dry-bulb temperature falls. The main condenser then spends less thermal capacity on sensible cooling and more of its available heat-rejection capacity can support latent condensation.
+
+If the buried intake itself crosses below dew point, it becomes a first-stage condenser. In that case it must be deliberately sloped, drained, and cleanable.
+
+For passive flow, large smooth ducts are preferred over small or corrugated pipe because pressure losses matter strongly when only stack effect or weak fan power is available.
+
+The current P2 design therefore uses an approximately 8 in smooth-wall intake with a 25-40 ft buried or deeply shaded run as a testable pre-cooling stage.
+
+## 6. Solar-assisted passive airflow
+
+Solar energy can improve collection indirectly by driving airflow rather than by heating the moist inlet air.
+
+A solar-heated exhaust chimney creates buoyancy and stack pressure:
+
+```text
+DeltaP ~ rho * g * H * (T_chimney - T_ambient) / T_ambient
+```
+
+The useful architecture is therefore:
+
+```text
+pre-cooled humid intake
+        -> cold condenser
+        -> drier exhaust
+        -> solar-heated chimney
+```
+
+This separates the two temperature objectives:
+
+```text
+cold condenser -> maximize T_dewpoint - T_surface
+hot chimney     -> maximize T_chimney - T_ambient
+```
+
+The design objective is not maximum airflow. Airflow should increase only while the cold sink can maintain the condenser below dew point.
+
+## 7. Fog interception
+
+Fog collection differs fundamentally from dew condensation.
+
+Fog harvesters intercept **liquid droplets that already exist in the air**, rather than forcing water vapor to undergo a phase change on a cold surface.
+
+Standard systems use vertical meshes positioned across fog-bearing wind. Droplets collide with fibers, coalesce, and drain into a gutter.
+
+Reviews of operational projects report that output is strongly site dependent. Published fog-harvesting literature commonly cites ranges on the order of **1-10 L/m2/day**, while long-term operational projects in highly favorable fog regions have reported typical average yields in the several-L/m2/day range.
+
+### Key design variables
+
+- liquid water content of fog;
+- wind speed and direction;
+- fiber diameter;
+- mesh shading fraction;
+- wettability;
+- mesh geometry;
+- drainage efficiency;
+- clogging and fouling;
+- structural survivability;
+- community maintenance.
+
+Traditional Raschel mesh remains widely used because it is inexpensive and field proven, although newer harp and biomimetic designs may improve interception and drainage.
+
+### Low-income-setting relevance
+
+Fog collection has an unusually low energy requirement but is only viable where frequent fog and useful wind coincide. It should be evaluated through a small standard collector before larger structures are built.
+
+## 8. Rainwater capture as the baseline comparator
+
+Any alternative atmospheric collector should be compared with ordinary rain harvesting.
+
+For rainfall depth `d` over catchment area `A`:
+
+```text
+V = A * d * eta
+```
+
+where `eta` is collection efficiency.
+
+Because one inch of rain over 1 m2 corresponds to approximately 25.4 L before losses, rainfall can exceed dew yields by orders of magnitude during wet events.
+
+Alternative dew or ground-coupled systems are therefore most defensible when they:
+
+- operate during rain-free periods;
+- supplement small storage reserves;
+- exploit local cold sinks that would otherwise be unused;
+- provide research value or resilience where roof catchment is impractical;
+- complement rather than displace high-volume rain capture.
+
+## 9. Scrap-material design framework
+
+The repository is explicitly interested in components that are locally obtainable or recoverable, but scrap should be categorized by function.
+
+### Structural reuse
+
+Lower-risk reuse candidates include:
+
+- lumber;
+- brackets;
+- frames;
+- supports;
+- non-water-contact sheet material;
+- clean gutters where provenance is known.
+
+### Thermal experimental reuse
+
+Useful for non-potable prototypes:
+
+- automotive radiators;
+- recovered metal heat exchangers;
+- salvaged fans;
+- hydronic pumps;
+- insulated vessels.
+
+### Water-contact caution
+
+Unknown or contaminated components should not be assumed safe for potable-water contact. Automotive radiators may contain coolant residue, corrosion products, metals, solder, oils, or unknown repair materials.
+
+The current radiator-based prototype is therefore a **thermal and collection-rate experiment**, not a potable-water device.
+
+## 10. Comparative prototype families
+
+The literature supports organizing experiments into four primary families:
+
+| Prototype | Physical mechanism | Main environmental requirement | Main bottleneck |
+|---|---|---|---|
+| Radiative dew panel | long-wave cooling | clear humid nights | radiative power |
+| Ground-coupled condenser | soil heat sink | cool ground + humid air | soil heat rejection |
+| Stream/spring condenser | moving-water heat sink | cold lawful water source + humid air | exchanger/site constraints |
+| Fog mesh | inertial droplet interception | frequent fog + wind | liquid-water content and aerodynamics |
+
+A fifth hybrid family combines buried intake pre-cooling, a ground- or water-cooled condenser, and solar-driven exhaust airflow.
+
+## 11. Required experimental measurements
+
+Every condensation prototype should measure at minimum:
+
+```text
+ambient temperature
+ambient RH
+dew point
+condenser temperature
+inlet air temperature/RH
+outlet air temperature/RH
+airflow
+runtime
+water collected
+```
+
+Ground- or water-coupled systems should additionally measure:
+
+```text
+coolant supply temperature
+coolant return temperature
+coolant flow
+thermal-sink temperature
+near-field soil/water temperature change
+```
+
+Fog systems should additionally record:
+
+```text
+fog occurrence
+wind speed/direction
+collector area
+mesh geometry
+water collected
+```
+
+## 12. Performance metrics
+
+Useful normalized metrics include:
+
+```text
+L/hour
+L/day
+L/m2/day
+L per dollar of build cost
+L per labor-hour of construction
+L per maintenance-hour
+```
+
+For cooled systems also report:
+
+```text
+W of sensible cooling
+W of latent cooling
+W of total heat rejection
+collection efficiency = measured condensate / predicted condensate
+```
+
+Modeled water production must never be reported as measured output.
+
+## 13. Design priorities for the next prototype cycle
+
+### Priority A - ground-coupled drum condenser
+
+Validate whether the current 55-gallon drum/radiator/PEX system can maintain:
+
+```text
+T_radiator <= T_dewpoint - 3 C
+```
+
+for sustained operation.
+
+### Priority B - radiative control panel
+
+Build approximately 1 m2 low-cost radiative panel to establish a local passive baseline in L/m2/night.
+
+### Priority C - fog screening rig
+
+Where fog occurs, deploy a small standardized mesh collector before considering large fog structures.
+
+### Priority D - stream thermal survey
+
+Measure stream or spring temperature against atmospheric dew point before designing any water-coupled condenser.
+
+### Priority E - hybrid airflow experiment
+
+Measure whether a solar chimney increases condensate production after accounting for the resulting increase in condenser thermal load.
+
+## 14. Evidence hierarchy
+
+The active literature lane should prioritize:
+
+1. peer-reviewed field experiments;
+2. peer-reviewed reviews and meta-analyses;
+3. authoritative engineering and water-sector guidance;
+4. documented operational community projects;
+5. well-characterized prototype reports;
+6. conceptual designs only after their governing physics are stated explicitly.
+
+## 15. Key literature seed set
+
+### Dew and atmospheric condensation
+
+- Khalil, B. et al. *A review: dew water collection from radiative passive collectors to recent developments of active collectors.* Sustainable Water Resources Management, 2016.
+- Review literature on sustainable atmospheric water harvesting and radiative cooling condensers.
+
+### Ground-coupled cooling and dehumidification
+
+- Full-scale experimental studies of earth-to-air heat exchangers in hot and humid climates, including latent cooling, moisture reduction, burial-depth effects, length effects, and soil thermal recovery.
+
+### Fog collection
+
+- Reviews of operational and experimental fog collectors, including Large Fog Collectors, Standard Fog Collectors, Raschel mesh, harp collectors, structural design, maintenance, and community sustainability.
+- Recent bio-inspired fog-harvesting mesh reviews for emerging fiber and drainage designs.
+
+## Research boundary
+
+This literature review supports prototype science and engineering research. It does not establish that any system will provide adequate household water, meet drinking-water standards, satisfy building/plumbing/environmental codes, or outperform conventional safe-water infrastructure.
+
+The strongest design criterion remains:
+
+> **Measure the local environmental gradient first, demonstrate the mechanism at small scale, close the heat and mass balances, test water quality, and only then scale the system.**
