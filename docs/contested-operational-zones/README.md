@@ -4,36 +4,32 @@
 
 This sector addresses water, sanitation, and hygiene continuity where conflict, insecurity, infrastructure damage, displacement, access restrictions, or contested control disrupt normal water systems.
 
-The sector is **actor-neutral and civilian-outcome focused**. It is intended for legitimate actors whose mission is to preserve civilian access to water and sanitation, including:
+The sector is **actor-neutral and civilian-outcome focused**. It is intended for legitimate responders preserving civilian water and sanitation access under applicable law and humanitarian principles.
 
-- humanitarian organizations;
-- public-health agencies;
-- municipal or utility teams;
-- civil-defense organizations;
-- community groups;
-- medical and relief organizations;
-- engineering and logistics teams;
-- military or government personnel when acting to support civilian WASH access under applicable law and humanitarian principles;
-- other legitimate responders supporting civilian survival and public health.
+The boundary is defined by purpose: **civilian WASH survival, continuity, recovery, and resilient transition**.
 
-The boundary is defined by purpose: **civilian WASH survival, continuity, and recovery**.
+## Current sector status
 
-## Core problem
+The contested-zone lane has moved beyond initial scoping into an integrated engineering and validation program.
 
-In contested operational zones, conventional WASH assumptions often fail simultaneously:
+Current work now includes:
 
-- centralized water service may stop;
-- pumps may lose power;
-- treatment plants may be damaged;
-- wells may be inaccessible or contaminated;
-- fuel and replacement parts may be unavailable;
-- roads and supply chains may be disrupted;
-- households may be displaced;
-- storage may become more valuable than collection capacity;
-- sanitation failures can contaminate otherwise usable water;
-- normal laboratory access may disappear.
+- Gaza regional WASH evidence review;
+- rainfall, humidity, yield, and storage modeling;
+- pallet/rubble rain-collector architecture;
+- rubble structural-use controls;
+- wind/ballast sizing;
+- barrel-bank load and stability analysis;
+- passive WASH resilience literature;
+- WHO/UNICEF-aligned small-supply management;
+- sanitary inspection;
+- Alternative Water Safety Plans;
+- UNICEF HWTS prototype scoring;
+- health-critical filter selection;
+- fail-safe / fail-visible operation;
+- pictorial SOP and usability testing.
 
-The design objective is therefore not one ideal system. It is a layered architecture that preserves some safe or bounded-use water capability as infrastructure degrades.
+The current program is documented in the [Phased Execution Roadmap](phased-execution-roadmap.md).
 
 ## Operating model
 
@@ -46,311 +42,276 @@ SOURCE / MATERIAL SCREENING
         ↓
 PRETREATMENT
         ↓
-FILTRATION
+HEALTH-CRITICAL FILTRATION
         ↓
 DISINFECTION AS REQUIRED
         ↓
 SAFE STORAGE
         ↓
-DISTRIBUTION
+CONTROLLED DISTRIBUTION
         ↓
-RETEST / RECLASSIFY
+MONITOR / CORRECT / RECLASSIFY
 ```
 
-Every step should be modular so that a damaged or unavailable component can be bypassed or replaced without collapsing the entire chain.
-
-## Source hierarchy
-
-Potential sources include:
-
-1. intact municipal or protected supply;
-2. protected well or spring;
-3. stored water;
-4. rainwater collection;
-5. surface water with appropriate treatment;
-6. fog/dew/condensate where productive;
-7. emergency transported water.
-
-A higher-volume source is not automatically safer. Source classification and treatment burden must be evaluated separately.
+The system should remain modular so a damaged or unavailable component can be isolated or replaced without collapsing the entire chain.
 
 ## Design doctrine
 
-### 1. Preserve existing safe supply first
+### Preserve existing safe supply first
 
 Do not replace an intact safer source simply because an improvised source is available.
 
-### 2. Use abundant local materials upstream
+### Use abundant local materials upstream
 
-Improvised materials can support:
+Good structural roles include:
 
-- catchment structure;
-- debris exclusion;
-- first flush;
-- settling;
-- roughing filtration;
-- storage support;
-- non-potable distribution.
+- screened rubble;
+- pallets and scrap framing;
+- barrels of known prior use;
+- masonry;
+- wire and brackets;
+- local drainage material.
 
-Examples include:
-
-- pallets and scrap wood;
-- barrels and cisterns of known prior use;
-- buckets;
-- PVC and hose;
-- mesh and cloth;
-- gravel and sand;
-- masonry and simple fittings.
-
-### 3. Increase control toward the health-critical barrier
-
-As the intended use approaches drinking water, component quality and validation requirements increase.
+### Increase control toward the health-critical barrier
 
 ```text
-IMPROVISED STRUCTURE
+LOCAL / IMPROVISED STRUCTURE
         ↓
 CONTROLLED WATER-CONTACT PATH
         ↓
-VALIDATED FILTRATION
+EVIDENCE-BACKED TREATMENT
         ↓
-VALIDATED DISINFECTION
+SAFE STORAGE
         ↓
-TESTING
+VERIFICATION
 ```
 
-### 4. Separate raw and treated water
+### Separate raw and treated water
 
-Raw and treated storage should remain physically distinct whenever possible.
+Raw and treated storage should remain physically and visually distinct.
 
-### 5. Design for partial failure
+### Design for partial failure
 
-Systems should remain useful when one source, filter, container, or treatment stage is lost.
+The system should degrade into a safer bounded-use state rather than silently remaining labeled as safe.
+
+## WHO / UNICEF alignment
+
+The sector now uses a compact management sequence:
+
+```text
+WU-0 context
+WU-1 sanitary inspection
+WU-2 system design
+WU-3 operational monitoring
+WU-4 treatment evidence
+WU-5 safe storage
+WU-6 corrective action
+WU-7 verification
+WU-8 use classification
+WU-9 resilience transition
+```
+
+See:
+
+- [WHO / UNICEF Alternative Water Systems Alignment](who-unicef-alternative-water-systems-alignment.md)
+- [WHO-Style Sanitary Inspection](who-style-sanitary-inspection-pallet-rubble-rain-collector.md)
+- [Alternative Water Safety Plan](alternative-water-safety-plan-template.md)
+- [UNICEF HWTS Prototype Scorecard](unicef-hwts-prototype-scorecard.md)
+
+## Current reference household architecture
+
+```text
+PALLET / SCRAP FRAME
+        ↓
+KNOWN LINER / BARRIER
+        ↓
+GUTTER / SCREEN
+        ↓
+FIRST FLUSH
+        ↓
+RAW BARREL BANK
+        ↓
+SETTLING / ROUGHING
+        ↓
+STANDARDIZED HEALTH-CRITICAL FILTER
+        ↓
+DISINFECTION IF REQUIRED
+        ↓
+CLEAN STORAGE
+        ↓
+STATUS-CONTROLLED OUTLET
+```
+
+The strongest current near-term treatment lane is passive pretreatment followed by a standardized gravity UF/membrane element and safe storage. Biosand/controlled ceramic remain fallback or supporting lanes; gravity-driven membrane remains a priority research lane.
+
+See [Health-Critical Filter Selection Matrix](health-critical-filter-selection-matrix.md).
+
+## Passive-system doctrine
+
+Passive systems are attractive in disrupted environments because they reduce dependence on:
+
+- grid electricity;
+- fuel supply;
+- pumps;
+- moving parts;
+- specialized maintenance.
+
+This is a resilience argument, not a claim of invisibility or guaranteed protection from surveillance or attack.
+
+See [Passive WASH Resilience Literature Note](passive-wash-resilience-literature-note.md).
+
+## Rubble integration
+
+Conflict debris can be useful structural material when screened and kept outside the health-critical water-contact path.
+
+Preferred roles:
+
+- ballast;
+- foundations;
+- barrel stands;
+- drainage aprons;
+- retaining structures;
+- erosion control;
+- protective mass.
+
+Core rule:
+
+```text
+RUBBLE / SCRAP STRUCTURE
+        ↓
+CONTROLLED LINER / BARRIER
+        ↓
+CONTROLLED WATER PATH
+```
+
+See:
+
+- [Rubble as WASH Construction Material](rubble-as-wash-construction-material.md)
+- [Rubble-Integrated WASH Prototype](rubble-integrated-wash-prototype.md)
+- [Four-Pallet Wind / Ballast Sizing](four-pallet-wind-ballast-sizing.md)
+- [Barrel-Bank Load / Stability](barrel-bank-load-stability.md)
+
+## Gaza case study
+
+Gaza remains the primary current contested-zone case study because it combines:
+
+- damaged centralized infrastructure;
+- displacement;
+- storage constraints;
+- groundwater salinity/nitrate concerns;
+- winter rainfall;
+- high summer humidity;
+- fuel/power constraints;
+- abundant rubble and salvaged structural material.
+
+The working seasonal architecture is:
+
+```text
+WINTER
+rain capture
+→ raw storage
+→ passive pretreatment
+→ controlled filtration
+→ disinfection if required
+→ clean storage
+
+SUMMER
+protected/delivered/desalinated sources
++
+atmospheric-water research where productive
+```
+
+See:
+
+- [Gaza Regional WASH Literature Review](gaza-regional-wash-literature-review.md)
+- [Gaza Rainfall and Humidity](gaza-rainfall-humidity-quantification.md)
+- [Gaza Monthly Yield and Storage Sizing](gaza-monthly-yield-and-storage-sizing.md)
 
 ## Phase gates
 
-### COZ-0 — context and access gate
+The original COZ gates remain the authoritative sector sequence:
 
-Document:
+```text
+COZ-0 context and access
+COZ-1 immediate survival water
+COZ-2 collection expansion
+COZ-3 pretreatment
+COZ-4 household/barrel filtration
+COZ-5 disinfection
+COZ-6 safe storage/distribution
+COZ-7 field verification
+COZ-8 continuity/redundancy
+```
 
-- civilian population served;
-- current water sources;
-- access constraints;
-- infrastructure condition;
-- sanitation hazards;
-- available containers and materials;
-- available treatment products;
-- power and fuel availability;
-- testing capability.
+The detailed engineering passes are tracked in the phased roadmap.
 
-### COZ-1 — immediate survival-water gate
-
-Goal: establish bounded-use water quickly.
-
-Priorities:
-
-- protect remaining clean water;
-- segregate suspect sources;
-- restore or improvise collection;
-- secure closed storage;
-- prevent fecal contamination;
-- label water by intended use.
-
-### COZ-2 — collection expansion gate
-
-Add modular collection based on local conditions:
-
-- pallet or freestanding rain catchments;
-- tarps and sheet collectors;
-- intact roof sections where safe;
-- spring or surface-water collection points;
-- atmospheric collection only where productive.
-
-### COZ-3 — pretreatment gate
-
-Add:
-
-- screens;
-- first-flush diversion;
-- settling;
-- roughing filtration.
-
-Goal: reduce solids and protect downstream treatment.
-
-### COZ-4 — household / barrel filtration gate
-
-Evaluate:
-
-- controlled sand or biosand;
-- ceramic filtration;
-- hollow-fiber or membrane modules;
-- activated carbon only for appropriate adsorption roles.
-
-Filtration alone does not establish potable safety.
-
-### COZ-5 — disinfection gate
-
-Use a validated method appropriate to the water and available resources, such as:
-
-- chlorine products of known concentration;
-- boiling;
-- UV;
-- solar disinfection where conditions and water clarity permit.
-
-Do not invent dosing or exposure parameters.
-
-### COZ-6 — safe-storage and distribution gate
-
-Protect treated water from recontamination through:
-
-- covered storage;
-- controlled dispensing;
-- clean vessels;
-- separation from raw-water handling;
-- simple distribution rules.
-
-### COZ-7 — field verification gate
-
-Use the strongest available evidence tier:
-
-- turbidity;
-- pH;
-- conductivity/TDS;
-- chlorine residual where applicable;
-- E. coli or coliform field testing;
-- contaminant-specific chemistry where source/material risks warrant it.
-
-### COZ-8 — continuity and redundancy gate
-
-A functioning system should ideally have:
-
-- more than one source;
-- more than one storage vessel;
-- replacement filter media or elements;
-- alternate disinfection method;
-- documented maintenance;
-- a fallback non-potable use classification if treatment fails.
-
-## Survival-use classification
+## Use classification
 
 Every water stream should be explicitly classified:
 
 ```text
 REJECT
-
 NON-POTABLE / BOUNDED USE
-
 TREATMENT REQUIRED
-
 TREATMENT RESEARCH ONLY
-
 VALIDATED FOR INTENDED USE
 ```
 
 No water should be upgraded based on appearance alone.
 
-## Contested-zone material logic
+## Fail-visible operation
 
-Scarcity changes the design problem but does not eliminate material risk.
-
-### Salvage-friendly roles
-
-Good candidates for structural use:
-
-- pallets;
-- scrap wood;
-- brackets;
-- intact metal framing;
-- masonry;
-- non-contact containers used only as supports.
-
-### Controlled water-contact roles
-
-Prefer known materials for:
-
-- liners;
-- storage vessels;
-- potable-path plumbing;
-- filter housings;
-- treatment media;
-- dispensing components.
-
-Where only uncertain material is available, classify output accordingly and avoid assuming potable suitability.
-
-## Collection architecture under degraded infrastructure
-
-A core low-resource architecture is:
+Every treated-water outlet should display one of four states:
 
 ```text
-PALLET / SCRAP FRAME
-        ↓
-KNOWN LINER OR CERTIFIED BARRIER COATING
-        ↓
-GUTTER / CONVEYANCE
-        ↓
-SCREEN
-        ↓
-FIRST FLUSH
-        ↓
-RAW BARREL
-        ↓
-SETTLING / ROUGHING
-        ↓
-CONTROLLED FILTER
-        ↓
-DISINFECTION IF REQUIRED
-        ↓
-CLEAN STORAGE
+GREEN  = validated for stated use
+AMBER  = restricted / treatment required
+RED    = do not use
+GRAY   = status unknown
 ```
 
-This architecture is useful because the structural material can be improvised while the health-critical water-contact path remains more controlled.
+Unknown does not default to safe.
 
-## Decentralization principle
+Current freeze rules include:
 
-Contested-zone WASH should favor many small modules over one fragile centralized system when conditions make centralized infrastructure unreliable.
+- no status card = not GREEN;
+- maintenance automatically produces GRAY;
+- positive final microbial result = RED;
+- unknown source or barrel history = not GREEN;
+- raw and clean outlets must remain distinct;
+- drinking outlet must support physical lockout;
+- return to GREEN requires documented recommissioning.
 
-Examples:
+See [Fail-Safe and Fail-Visible Design](fail-safe-and-fail-visible-design.md).
+
+## Usability
+
+The system is being designed for unfamiliar responders using low-text pictorial SOPs.
+
+Current internal target:
 
 ```text
-1 pallet + 1 barrel
-1 household biosand unit
-1 ceramic or membrane element
-1 safe-storage container
+>=18/20 usability score
+AND
+zero critical errors
 ```
 
-can be replicated across households or aid points.
+See [Pictorial SOP and Usability-Test Protocol](pictorial-sop-and-usability-test-protocol.md).
 
-Advantages include:
+## Immediate execution queue
 
-- easier repair;
-- lower transport burden;
-- distributed failure risk;
-- local maintenance;
-- incremental scaling.
-
-## Community-scale escalation
-
-Where larger storage or logistics are available, combine modules into:
-
-```text
-multiple catchments
-      ↓
-raw-water bank
-      ↓
-settling / roughing
-      ↓
-central filtration
-      ↓
-disinfection
-      ↓
-clean-water storage
-      ↓
-controlled distribution
-```
-
-The same validation gates apply at larger scale.
+1. Freeze FF-M1 and FF-F1 first-flush hydraulic designs.
+2. Build contamination-isolated barrel manifold details.
+3. Build actual BOM and lifecycle-cost model.
+4. Create durability-cycle protocol.
+5. Freeze a specific health-critical filter candidate from product-level evidence.
+6. Build integrated household bench architecture.
+7. Continue hourly Gaza summer atmospheric-water modeling.
+8. Normalize older references and remove stale citation artifacts.
 
 ## Safety and legal boundary
 
-This sector is for WASH protection, continuity, and recovery for civilians and other protected populations.
+This sector supports WASH protection, continuity, and recovery for civilians and other protected populations.
 
 It does not provide guidance for:
 
@@ -358,36 +319,10 @@ It does not provide guidance for:
 - poisoning or contaminating water;
 - targeting water infrastructure;
 - disguising military capability as humanitarian infrastructure;
-- operational tactics unrelated to civilian WASH delivery.
+- unrelated tactical movement, evasion, or force-protection operations.
 
 Work should comply with applicable public-health requirements, humanitarian principles, environmental rules, and international humanitarian law.
 
-## Initial research lanes
-
-1. Rapid rain-catchment deployment from pallets, tarps, scrap timber, and existing barrels.
-2. Improvised-to-controlled filtration ladders for barrel-scale systems.
-3. Safe barrier coatings and liners for salvaged catchment structures.
-4. Household microbial field-testing methods under limited laboratory access.
-5. Water-quality risk after infrastructure damage, fires, flooding, sewage intrusion, and industrial releases.
-6. Low-power and no-power disinfection options.
-7. Redundant storage and distribution architectures.
-8. Freeze/heat resilience for exposed systems.
-9. Community-scale modular WASH nodes.
-10. Repair and maintenance protocols where replacement parts are intermittent.
-
-## Existing WASH repo dependencies
-
-This sector should reuse and extend:
-
-- `docs/pallet-rain-collector-prototype.md`
-- `docs/barrel-scale-filtration-roadmap.md`
-- `docs/collection-to-filtration-literature-review.md`
-- `docs/filtration-performance-next-pass.md`
-- `docs/field-validation-and-filter-qa.md`
-- `docs/microbial-field-testing-and-rainwater-chemical-risk.md`
-
 ## Sector objective
 
-The objective is not to create one universal emergency purifier.
-
-It is to create a **validated family of low-resource WASH architectures that legitimate responders can assemble, adapt, test, repair, and scale to preserve civilian water access when normal infrastructure no longer functions reliably.**
+The objective is a **validated family of low-resource alternative water architectures that legitimate responders can assemble, adapt, test, repair, and scale to preserve civilian water access when normal infrastructure no longer functions reliably.**
