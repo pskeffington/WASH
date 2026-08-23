@@ -130,7 +130,7 @@ The primary low-income architecture no longer assumes that the dwelling has an i
 Reference architecture:
 
 ```text
-AGED / SALVAGED PALLET OR WOOD FRAME
+ELEVATED AGED / SALVAGED PALLET OR WOOD FRAME
         ↓
 REPLACEABLE WATERPROOF SKIN
         ↓
@@ -139,6 +139,8 @@ LOW-EDGE GUTTER OR LINER TROUGH
 SCREEN
         ↓
 FIRST FLUSH
+        ↓
+CONTINUOUS GRAVITY DROP
         ↓
 EXISTING BARREL / CISTERN
         ↓
@@ -157,12 +159,22 @@ roof work may be unaffordable
 manufacture new catchment area independently of the house
 ```
 
+The pallet collector must be elevated above the receiving barrel/cistern inlet so the complete transfer path remains gravity-descending. Future drawings should not depict the active pallet collector resting on the ground.
+
+The current sketch contract also explicitly avoids recommending painting, staining, sealing, spraying, or coating the pallet as a routine waterproofing step. The design separates functions:
+
+```text
+WOOD = STRUCTURE
+LINER = CONTROLLED WATER-CONTACT / WATERPROOF SURFACE
+```
+
 The reference pallet lane now uses measured pallet dimensions rather than assuming 4 x 4 ft. A common approximately 48 x 40 in pallet provides about 13.3 ft2 of surface area. At a shallow ~15 degree collector angle, horizontal projected area is about 12.9 ft2, corresponding to about 8.0 gallons theoretical per inch of rain and about 6.4 gallons per inch at an illustrative 80% recovery.
 
 Current pallet research gates include:
 
 - salvage acceptance / repairability;
-- structural stability;
+- elevated structural stability;
+- gravity-head relationship to storage;
 - liner durability;
 - hydraulic capacity;
 - first-flush performance;
@@ -174,7 +186,10 @@ Current pallet research gates include:
 
 The goal is not to make aged pallet wood itself potable-safe. The wood is treated primarily as abundant structure, while the water-contact surface remains controlled and replaceable.
 
-See [Pallet Rain Collector Prototype](docs/pallet-rain-collector-prototype.md).
+See:
+
+- [Pallet Rain Collector Prototype](docs/pallet-rain-collector-prototype.md)
+- [Pallet Rain Collector Sketch Specification](docs/pallet-rain-collector-sketch-specification.md)
 
 ### 2. Rubble-integrated support systems
 
@@ -341,6 +356,7 @@ VERIFICATION
 - [Literature Review](docs/literature-review.md)
 - [Annotated Bibliography](docs/bibliography.md)
 - [Pallet Rain Collector Prototype](docs/pallet-rain-collector-prototype.md)
+- [Pallet Rain Collector Sketch Specification](docs/pallet-rain-collector-sketch-specification.md)
 - [Barrel-Scale Filtration Roadmap](docs/barrel-scale-filtration-roadmap.md)
 - [Field Validation and Filter QA](docs/field-validation-and-filter-qa.md)
 - [Microbial Field Testing and Rainwater Chemical Risk](docs/microbial-field-testing-and-rainwater-chemical-risk.md)
