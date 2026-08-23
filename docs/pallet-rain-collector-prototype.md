@@ -21,15 +21,17 @@ Collected water is **experimental and non-potable by default** unless the entire
 ## Core architecture
 
 ```text
-SALVAGED PALLET / WOOD FRAME
+ELEVATED SALVAGED PALLET / WOOD FRAME
         ↓
 REPLACEABLE WATERPROOF SKIN
         ↓
-LOW-EDGE GUTTER
+LOW-EDGE GUTTER ABOVE STORAGE INLET
         ↓
 REMOVABLE DEBRIS SCREEN
         ↓
 FIRST-FLUSH DIVERTER
+        ↓
+GRAVITY DROP
         ↓
 EXISTING BARREL / CISTERN
         ↓
@@ -37,6 +39,72 @@ CONTROLLED OVERFLOW
 ```
 
 The pallet is primarily **structure**. The liner or other characterized surface is the primary rainwater-contact layer.
+
+## Sketch and deployment geometry requirement
+
+All future sketches, diagrams, field drawings, and prototype layouts for the pallet collector must show the catchment **elevated above the receiving barrel or cistern inlet**. A pallet resting flat on the ground is not the reference architecture.
+
+The purpose of the elevation is hydraulic, not decorative: the entire pathway from collector to storage must operate by gravity without requiring a pump.
+
+Reference vertical relationship:
+
+```text
+          UPPER PALLET EDGE
+                /--------/
+               / LINER  /
+              /--------/
+                  ↓
+             LOW-EDGE GUTTER
+                  ↓
+              SCREEN / TEE
+                  ↓
+          FIRST-FLUSH DIVERTER
+                  ↓
+             GRAVITY DROP
+                  ↓
+          BARREL / CISTERN INLET
+            ┌─────────────┐
+            │             │
+            │   STORAGE   │
+            │             │
+            └─────────────┘
+```
+
+### Mandatory sketch cues
+
+Every concept sketch should visibly communicate:
+
+- pallet collector supported on legs, braces, blocks, a second pallet, or another stable frame;
+- low collector edge and gutter **higher than the barrel/cistern inlet**;
+- continuously descending pipe or channel from gutter to storage;
+- first-flush diverter positioned without creating an uphill return path;
+- barrel/cistern on stable ground or a low broad base;
+- overflow leaving the storage vessel independently of the collector;
+- no requirement to lift collected water into storage.
+
+The minimum useful elevation is the amount needed to preserve positive hydraulic fall through the gutter, screen, first-flush hardware, connecting pipe, and storage inlet. Final dimensions should be derived from the actual barrel/cistern and fittings rather than from one universal height.
+
+### Reference prototype height logic
+
+For a typical 55-gallon drum, the inlet is near the top of a vessel roughly 34-36 in high. A practical sketch should therefore begin with the pallet's low collection edge approximately **42-48 in above grade**, then confirm that the actual plumbing configuration preserves downward slope to the inlet.
+
+This is a starting geometry, not a fixed requirement. A lower cistern inlet can permit a lower collector; a taller barrel or large first-flush assembly may require greater elevation.
+
+The preferred rule is:
+
+```text
+LOW EDGE OF CATCHMENT
+        >
+GUTTER OUTLET
+        >
+TRANSFER / TEE ELEVATION
+        >
+STORAGE INLET
+```
+
+with sufficient vertical separation to prevent standing water, reverse slope, or backup during heavy rainfall.
+
+The structure should not be raised higher than necessary. Excessive elevation increases overturning risk and structural demand. The design objective is **minimum stable elevation that reliably gravity-feeds the chosen storage vessel**.
 
 ## Reference pallet geometry
 
@@ -222,19 +290,26 @@ The collector should not require attachment to an aging roof or exterior wall.
 Reference side geometry:
 
 ```text
-      upper edge
-         _________
-        /        /
-       / liner  /
-      /________/
-          ↓
-        gutter
+               upper edge
+                  _________
+                 /        /
+                / liner  /
+               /________/
+                   ↓
+                 gutter
+                   ↓
+             gravity plumbing
+                   ↓
+          top/side inlet of barrel
+              ┌─────────┐
+              │ storage │
+              └─────────┘
 
-rear brace / legs
-+
-low broad footing
-+
-ballast or anchors as required
+ elevated legs / rear brace
+ +
+ low broad footing
+ +
+ ballast or anchors as required
 ```
 
 Possible structural inputs include:
@@ -246,7 +321,7 @@ Possible structural inputs include:
 - screened rubble used outside the water-contact path;
 - earth anchors or stakes where appropriate.
 
-The collector should remain low enough that filling the storage vessel does not require excessive elevation or an unstable tower.
+The collector must be high enough for gravity transfer to the storage inlet while remaining as low and broad as practical for stability.
 
 ## Gutter and hydraulic path
 
@@ -374,15 +449,15 @@ Possible destinations include a stable rock apron, vegetated swale, rain garden,
 The smallest reference architecture is:
 
 ```text
-1 pallet collector
+1 elevated pallet collector
 → 1 existing barrel
 ```
 
 Expansion can occur without changing the basic module:
 
 ```text
-2 pallets → 1 barrel / cistern
-4 pallets → barrel bank / cistern
+2 elevated pallets → 1 barrel / cistern
+4 elevated pallets → barrel bank / cistern
 ```
 
 or as independent units:
@@ -417,7 +492,7 @@ This illustrates why the architecture should scale by **adding inexpensive colle
 
 ## Wind and stability gate
 
-A freestanding collector introduces wind load that a roof-mounted rain barrel does not.
+A freestanding elevated collector introduces wind load that a roof-mounted rain barrel does not.
 
 Before field use, verify:
 
@@ -425,10 +500,11 @@ Before field use, verify:
 - rear brace cannot fold under normal handling;
 - feet cannot slide on the local surface;
 - liner attachment cannot peel progressively from one corner;
+- collector elevation remains stable under asymmetric loading;
 - the structure remains stable with storage both empty and full;
 - ballast or anchors do not create trip hazards or interfere with drainage.
 
-A high-angle collector may reduce horizontal rainfall interception while increasing exposure to wind. For the first pallet prototype, use the lowest practical angle that drains reliably and survives the site conditions.
+A high-angle or unnecessarily tall collector may increase wind exposure and overturning moment. For the first pallet prototype, use the lowest practical angle and minimum elevation that still provide reliable drainage and gravity transfer into storage.
 
 ## Field measurements
 
@@ -437,6 +513,9 @@ Each prototype should record:
 ```text
 actual pallet dimensions
 collector angle
+low-edge height above grade
+storage-inlet height above grade
+vertical head between gutter outlet and storage inlet
 horizontal projected area
 rainfall depth
 first-flush volume
@@ -470,13 +549,13 @@ for gallons and ft2.
 
 Document pallet dimensions, condition, provenance/markings where visible, contamination concerns, and required repairs. Reject unsafe structural stock.
 
-### P1 - structural
+### P1 - elevated structural geometry
 
-Collector remains stable under handling, simulated rainfall, and locally relevant wind exposure and drains without damaging deformation.
+Collector is independently supported above grade, remains stable under handling and locally relevant wind exposure, and maintains the required gravity-feed relationship to the storage inlet.
 
 ### P2 - hydraulic
 
-Gutter, screen, diverter, storage inlet, and overflow pass a simulated heavy-rain test without uncontrolled backup.
+Gutter, screen, diverter, storage inlet, and overflow pass a simulated heavy-rain test without uncontrolled backup. The complete path from catchment to storage remains continuously gravity-descending.
 
 ### P3 - first flush
 
@@ -488,7 +567,7 @@ Measure actual versus theoretical captured rainfall over multiple storms using p
 
 ### P5 - durability
 
-Track liner puncture, UV/weather exposure, wood movement, fastener loosening, gutter distortion, and repair frequency.
+Track liner puncture, UV/weather exposure, wood movement, fastener loosening, gutter distortion, support settlement, and repair frequency.
 
 ### P6 - resident maintenance
 
@@ -521,20 +600,20 @@ Collected water remains experimental/non-potable unless a separate validated wat
 
 ## Design principle
 
-The pallet system is not primarily a rain barrel accessory. It is a method for manufacturing **new catchment area from locally abundant structural waste without touching an unsafe or unaffordable roof**.
+The pallet system is not primarily a rain barrel accessory. It is a method for manufacturing **new elevated catchment area from locally abundant structural waste without touching an unsafe or unaffordable roof**.
 
 ```text
 ABUNDANT AGED WOOD
         +
 SIMPLE REPAIR / BRACING
         +
-REPLACEABLE WATERPROOF SKIN
+ELEVATED GRAVITY-FEED GEOMETRY
         +
-GRAVITY PLUMBING
+REPLACEABLE WATERPROOF SKIN
         +
 EXISTING STORAGE
         =
 LOW-COST MODULAR MICRO-CATCHMENT
 ```
 
-The research question is therefore not simply whether a pallet can collect rain. It is whether a pallet-based module can deliver useful water volume per unit cost, labor, and maintenance while remaining structurally understandable, repairable, and honest about water quality.
+The research question is therefore not simply whether a pallet can collect rain. It is whether a pallet-based module can deliver useful water volume per unit cost, labor, and maintenance while remaining structurally understandable, repairable, gravity-fed, and honest about water quality.
