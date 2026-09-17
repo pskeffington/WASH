@@ -1,5 +1,11 @@
 # Alternative Water Systems
 
+## Portfolio evidence review — 2026-09-17
+
+**Reviewed carry-forward.** The pallet/household architecture and field QA protocols remain prototype research. No new measured hydraulic, durability, water-quality, or independent intended-use validation was identified in the reviewed main-branch evidence. Designs remain experimental and non-potable by default.
+
+Maturity and valuation ranges are unchanged. [Current review and next evidence gates](docs/valuation/2026-09-17_review.md). Dates and result claims elsewhere retain their original scope.
+
 Public research and prototype-development repository for **low-cost, passive, modular, and locally repairable alternative water systems** intended for resource-constrained, infrastructure-limited, humanitarian, disaster-recovery, and conflict-affected settings.
 
 **Maintainer:** Paul Skeffington, MS, MPH  

@@ -1,18 +1,11 @@
 {
-  "schema_version": "portfolio-valuation-manifest/v1",
-  "repository": "pskeffington/WASH",
-  "portfolio_valuator": "pskeffington/Portfolio",
-  "valuation_status": "aligned_internal_estimate",
-  "market_lane": "alternative water systems / WASH engineering research / humanitarian resilience",
-  "maturity_stage": "active",
+  "claim_boundary": "Alternative-water and WASH research/prototype work only. Designs are non-potable experimental systems by default unless independently validated for a stated use. No WHO/UNICEF approval, field-effectiveness guarantee, potable-water certification, institutional endorsement, or operational deployment authority is asserted.",
+  "collateral_treatment": "Treat as public-interest research IP, prototype documentation, and reusable methods only. Apply field-validation, product-specific treatment evidence, materials/sanitary-safety, source rights, transferability, key-person, partner-adoption, and commercialization discounts. Reviewed on 2026-09-17 against the recorded main-branch evidence; current and forward ranges, maturity, and evidence grade are carried forward without uplift. See docs/valuation/2026-09-17_review.md for scope and unresolved evidence gates.",
+  "current_value_range_usd": {
+    "high": 125000,
+    "low": 50000
+  },
   "evidence_grade": "B",
-  "product_surface": "low-cost alternative-water research and prototype-validation program with pallet capture, storage, filtration, sanitary-inspection, and fail-visible operating concepts",
-  "integration_role": "shared WASH methods, prototype, and resilience research component within the public-health family",
-  "public_safety_status": "clean",
-  "risk_level": "medium",
-  "current_value_range_usd": {"low": 50000, "high": 125000},
-  "forward_value_range_usd": {"low": 100000, "high": 350000},
-  "collateral_treatment": "Treat as public-interest research IP, prototype documentation, and reusable methods only. Apply field-validation, product-specific treatment evidence, materials/sanitary-safety, source rights, transferability, key-person, partner-adoption, and commercialization discounts.",
   "evidence_paths": [
     "README.md",
     "docs/alternative-water-collection-methodology.md",
@@ -23,15 +16,17 @@
     "docs/field-validation-and-filter-qa.md",
     "docs/contested-operational-zones/who-unicef-alternative-water-systems-alignment.md",
     "docs/contested-operational-zones/alternative-water-safety-plan-template.md",
-    "portfolio_valuation_manifest.json"
+    "portfolio_valuation_manifest.json",
+    "docs/valuation/2026-09-17_review.md"
   ],
-  "next_value_unlocks": [
-    "complete reproducible bench validation for a bounded reference architecture",
-    "freeze product-level health-critical treatment evidence",
-    "complete durability, hydraulic, water-quality, and usability test records",
-    "obtain independent methodological or field review",
-    "demonstrate external responder, community, research, or partner use"
-  ],
+  "forward_value_range_usd": {
+    "high": 350000,
+    "low": 100000
+  },
+  "integration_role": "shared WASH methods, prototype, and resilience research component within the public-health family",
+  "last_aligned_on": "2026-09-17",
+  "market_lane": "alternative water systems / WASH engineering research / humanitarian resilience",
+  "maturity_stage": "active",
   "missing_financial_inputs": [
     "revenue",
     "contracts",
@@ -40,6 +35,18 @@
     "third-party validation",
     "independent appraisal"
   ],
-  "claim_boundary": "Alternative-water and WASH research/prototype work only. Designs are non-potable experimental systems by default unless independently validated for a stated use. No WHO/UNICEF approval, field-effectiveness guarantee, potable-water certification, institutional endorsement, or operational deployment authority is asserted.",
-  "last_aligned_on": "2026-08-31"
+  "next_value_unlocks": [
+    "complete reproducible bench validation for a bounded reference architecture",
+    "freeze product-level health-critical treatment evidence",
+    "complete durability, hydraulic, water-quality, and usability test records",
+    "obtain independent methodological or field review",
+    "demonstrate external responder, community, research, or partner use"
+  ],
+  "portfolio_valuator": "pskeffington/Portfolio",
+  "product_surface": "low-cost alternative-water research and prototype-validation program with pallet capture, storage, filtration, sanitary-inspection, and fail-visible operating concepts",
+  "public_safety_status": "clean",
+  "repository": "pskeffington/WASH",
+  "risk_level": "medium",
+  "schema_version": "portfolio-valuation-manifest/v1",
+  "valuation_status": "reviewed_carry_forward"
 }
